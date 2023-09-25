@@ -33,3 +33,7 @@ Anna Ramji grew up hiking and fishing along the Eastern Sierra Nevada mountain r
 B.S. Environmental Sciences, University of California, Berkeley (2021)
 
 Master of Environmental Data Science, University of California, Santa Barbara (2024)
+
+### Themes:
+
+Themes from https://bootswatch.com/ (light = minty, dark = solar)
