@@ -6,6 +6,13 @@ about:
   template: trestles
   image-shape: rectangle
   image-width: 20em
+  links: 
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/annaramji/ 
+      icon: linkedin.svg
+    - text: GitHub
+      icon: github
+      href: https://github.com/a-ramji
 ---
 
 This is a Quarto website.
