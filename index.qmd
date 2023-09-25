@@ -1,5 +1,11 @@
 ---
-title: "a-ramji.github.io"
+title: "Anna Ramji"
+toc: false
+image: RamjiAnna_MEDS_24_Bren_Portraits_0001.jpg
+about:
+  template: trestles
+  image-shape: rectangle
+  image-width: 20em
 ---
 
 This is a Quarto website.
