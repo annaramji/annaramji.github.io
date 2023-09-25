@@ -1,7 +1,7 @@
 ---
 title: "Anna Ramji"
 toc: false
-image: RamjiAnna_MEDS_24_Bren_Portraits_0001.jpg
+image: images/RamjiAnna_MEDS_24_Bren_Portraits_0001.jpg
 about:
   template: trestles
   image-shape: rectangle
@@ -13,6 +13,9 @@ about:
     - text: GitHub
       icon: github
       href: https://github.com/a-ramji
+    - text: Email
+      icon: envelope
+      href: mailto::aramji@ucsb.edu
 ---
 
 This is a Quarto website.
