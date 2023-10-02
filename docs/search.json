@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Anna Ramji",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "index.html#hello",
+    "href": "index.html#hello",
+    "title": "Anna Ramji",
+    "section": "Hello!",
+    "text": "Hello!\nAnna Ramji grew up hiking and fishing along the Eastern Sierra Nevada mountain range, where she developed an interest in ecology and the impacts of climate change on native ecosystems. During her time as an undergraduate at the University of California, Berkeley, she worked as a research assistant and laboratory manager at Caldwell Laboratory, studying stomatopods and several species of octopus. Anna enjoyed taking extra-curricular courses in Data Science, Japanese, French, and Urban Design. She earned her Bachelor of Science degree in Environmental Sciences with a dual focus in Biology and Chemistry, graduating with Honors in 2021. She has since worked to co-author a paper on body patterns of Octopus chierchiae with alumni from Caldwell Lab, which was published in PLOS One in April, 2023. Her interest in data science – particularly data visualization as a powerful tool for scientific communication – drew her to take additional courses in Python and R, and teach herself JavaScript to use Observable Notebooks. As a MEDS graduate student, she hopes to combine her expertise in environmental issues with her passion for data science and visualization to become an enthusiastic and inclusive scientific communicator in future roles. She is interested in working with ecological data, clean energy, and agroecology."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Anna Ramji",
+    "section": "Education:",
+    "text": "Education:\nB.S. Environmental Sciences, University of California, Berkeley (2021)\nMaster of Environmental Data Science, University of California, Santa Barbara (2024)\n\nThemes:\nThemes from https://bootswatch.com/ (light = minty, dark = solar)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
