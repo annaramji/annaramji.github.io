@@ -1,1 +1,40 @@
 /* css styles */
+
+h1 {
+  text-align: center;
+  background-color: #1b5c41;
+  border-radius: 25px;
+  color: #FDFBF7;
+  
+}
+
+a {
+  color: #379AAF;
+  font-style: italic;
+  
+}
+
+
+/* class selector */
+
+.blue-text {
+  color: blue;
+}
+
+.important-text {
+  color: red;
+  font-size: 20px;
+}
+
+
+
+/* h1 {
+  font-color: $darkblue;
+}
+
+.button-styling {
+  background: $teal;
+  color: $darkblue; 
+  border-color: $darkgray;
+}
+*/

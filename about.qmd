@@ -1,9 +1,12 @@
 ---
 title: "About"
 ---
+<h1> This website is under construction :) </h1>
+<h1> this text is a h1 header but does not have the class .title</h1>
 
-About this site
+# this is also a level-one header (h1)
 
-```{r}
-1 + 1
-```
+<h1 class="title">this is a title</h1>
+
+
+<p class="title center-text"> this will also be celadon</p>

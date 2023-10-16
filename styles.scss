@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+
+// Colors
+
+$darkblue: #053660;
+$dark-green: #1b5c41; 
+$grey-foam: #69978f;
+$white-green: #D1D9CE;
+$teal: #147C91;
+$darkgray: #333333;
+$ponyo: #E84C4F;
+$ponyo-sky: #379AAF;
+$white: #FFFFFF;
+$cream: #FDFBF7;
+$garden: #B9C297;
+$celadon: #AFE1AF;
+$light-green: #DAF7A6;
+
+// base document Colors
+
+$navbar-bg: $dark-green; // navbar
+$navbar-fg: $white; // navbar foreground elements
+$navbar-hl: $garden; // highlight color when hovering over navbar links
+$body-bg: $cream; // page background 
+$body-color: $darkgray; // page text 
+$footer-bg: $ponyo-sky; // footer 
+$link-color: $darkblue; // hyperlinks 
+
+// Inline code
+$code-bg: $cream; // inline code background color
+// $code-color: $purple; // inline code text color
+
+
+// Import fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200;1,400&display=swap');
+
+
+
+/*-- scss:rules --*/
+
+h1, h2 {
+  letter-spacing: 4px;
+  color: $grey-foam;
+}
+
+
+.title {
+  color: $dark-green;
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+/*-- use vars in CSS rules (we'll learn more about how to write CSS soon!) --*/

@@ -11,13 +11,21 @@ website:
       - about.qmd
       - href: resources.qmd
         text: Resources
+  page-footer:
+#  background: light
+    left: "Copyright 2023, Anna Ramji"
+    right:
+     - icon: github
+       href: https://github.com/a-ramji
 
 format:
   html:
     theme: 
-      light: minty
-      dark: solar
-    css: styles.css
+      - styles.scss
+    #  light: minty
+    # - dark: solar
+  #  css: styles.css
+    mainfont: Nunito
     toc: true
     page-layout: full
 
