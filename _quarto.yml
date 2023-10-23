@@ -9,6 +9,8 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+      - href: blog.qmd
+        text: Blog
       - href: resources.qmd
         text: Resources
   page-footer:
@@ -22,7 +24,7 @@ format:
   html:
     theme: 
       - styles.scss
-    #  light: minty
+   #   - minty
     # - dark: solar
   #  css: styles.css
     mainfont: Nunito
