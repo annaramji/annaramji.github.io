@@ -1,0 +1,12 @@
+# this enables banner style title blocks to all posts inside the /blog folder
+title-block-banner: true
+#  you can add customization
+# or add this into the yml of each individual blog post, 
+# but it's more convenient to do it all in one page here
+
+freeze: auto
+# will only re-render if you made changes
+# if set to true:
+# would need to click render button on individual blog post, go to build tab, click render again
+# auto should recognize changes made and render it for you
+

@@ -15,15 +15,21 @@ $cream: #FDFBF7;
 $garden: #B9C297;
 $celadon: #AFE1AF;
 $light-green: #DAF7A6;
-
+$rich-green: #142a0c;
+$mint-green-light: #79bd8f;
+$sage-green: #4B7D4E;
+$sams-sage-green-light: #D1D9CE;
+$sams-sage-green-dark: #98A08D;
+$darkest-green: #131f14;
+$another-sage-green: #658067;
 // base document Colors
 
-$navbar-bg: $dark-green; // navbar
+$navbar-bg: $another-sage-green; // navbar
 $navbar-fg: $white; // navbar foreground elements
 $navbar-hl: $garden; // highlight color when hovering over navbar links
 $body-bg: $cream; // page background 
 $body-color: $darkgray; // page text 
-$footer-bg: $ponyo-sky; // footer 
+$footer-bg: $rich-green; // footer 
 $link-color: $darkblue; // hyperlinks 
 
 // Inline code
@@ -38,19 +44,45 @@ $code-bg: $cream; // inline code background color
 
 /*-- scss:rules --*/
 
-h1, h2 {
+h1 {
   letter-spacing: 4px;
+  font-weight: 700;
+  color: $grey-foam;
+}
+
+h2 {
+  letter-spacing: 4px;
+  font-weight: 700;
   color: $grey-foam;
 }
 
 
+h3 {
+  font-weight: 400;
+ // font-size: 35px;
+}
+
+body {
+  line-height: 1.5; // min 1.5 suggested for assistive tech
+  font-size: 19.5px;
+}
+
+
 .title {
-  color: $dark-green;
+  color: $rich-green;
+  font-weight: 700;
+  line-height: 2.0;
+
 }
 
 
 .center-text {
   text-align: center;
+}
+
+// listing description text styling
+.description {
+  font-size: 25px;
 }
 
 /*-- use vars in CSS rules (we'll learn more about how to write CSS soon!) --*/

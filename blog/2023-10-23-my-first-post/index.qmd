@@ -1,0 +1,47 @@
+---
+title: "My first blog post"
+description: "Testing out Quarto Blog options"
+author:
+  - name: Anna Ramji
+    url: https://a-ramji.github.io/
+    # orcid: 
+    affiliation: MEDS
+    affiliation-url: https://bren.ucsb.edu/about
+#  - name:
+ #   etc
+date: 10-23-2023
+categories: [Quarto, MEDS, Workshop]
+#  - cat1
+ # - cat2
+bibliography: references.bib
+citation: 
+  url: https://a-ramji.github.io/blog/2023-10-23-my-first-post/
+image: dana-sarsenbekova-LF1BskR3GKI-unsplash.jpg
+draft: true # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
+---
+
+# This website is under construction!!!
+
+## This is my first section
+
+Testing out formatting in Quarto Blogs
+
+here's a footnote[^1]
+
+[^1]: This is my first footnote!
+
+## This is my second section
+
+this is another style of footnote -- inline![^2]
+
+[^2]: This is an inline footnote
+
+more text here
+
+citing something here too[@gaynor2022]
+
+citing my paper! [@liu2023]
+
+citing Sam Csik's quarto blog post here [@csik2022].
+
+image source from Unsplash, by [Dana Sarsenbekova](https://unsplash.com/photos/a-snow-covered-mountain-with-houses-in-the-foreground-LF1BskR3GKI)

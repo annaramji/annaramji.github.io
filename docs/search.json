@@ -25,7 +25,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This website is under construction :)\n\n\nthis text is a h1 header but does not have the class .title\n\n\nthis is also a level-one header (h1)\n\nthis is a title\n\n\nthis will also be celadon"
+    "text": "This website is under construction :)\n\n\nthis is a title\n\n\nthis is center-aligned paragraph text"
   },
   {
     "objectID": "practice-markdown.html",
@@ -33,5 +33,12 @@
     "title": "Here is my level one header",
     "section": "",
     "text": "Here is my level one header\nHere is my first paragraph\nHere is my second paragraph, where you can read more about MEDS.\nThis is very important text!"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "No matching items"
   }
 ]
