@@ -1,0 +1,3359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Anna Ramji">
+<meta name="dcterms.date" content="2023-12-06">
+<meta name="description" content="Testing out Quarto Blog options">
+
+<title>a-ramji.github.io - Test python post</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">a-ramji.github.io</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html" rel="" target="">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Test python post</h1>
+                  <div>
+        <div class="description">
+          Testing out Quarto Blog options
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Quarto</div>
+                <div class="quarto-category">MEDS</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://a-ramji.github.io/">Anna Ramji</a> <a href="https://orcid.org/https://orcid.org/0009-0006-7576-7793" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://bren.ucsb.edu/about">
+              MEDS
+              </a>
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 6, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lesson-22-stac-specification" id="toc-lesson-22-stac-specification" class="nav-link active" data-scroll-target="#lesson-22-stac-specification">Lesson 22: STAC specification</a>
+  <ul class="collapse">
+  <li><a href="#item-collection-and-catalog" id="toc-item-collection-and-catalog" class="nav-link" data-scroll-target="#item-collection-and-catalog">22.1 Item, Collection, and Catalog</a></li>
+  <li><a href="#api" id="toc-api" class="nav-link" data-scroll-target="#api">22.2 API</a></li>
+  <li><a href="#catalog" id="toc-catalog" class="nav-link" data-scroll-target="#catalog">22.3 Catalog</a>
+  <ul class="collapse">
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  </ul></li>
+  <li><a href="#exploration" id="toc-exploration" class="nav-link" data-scroll-target="#exploration">Exploration</a></li>
+  <li><a href="#collection" id="toc-collection" class="nav-link" data-scroll-target="#collection">Collection</a></li>
+  <li><a href="#catalog-search" id="toc-catalog-search" class="nav-link" data-scroll-target="#catalog-search">Catalog search</a></li>
+  <li><a href="#item" id="toc-item" class="nav-link" data-scroll-target="#item">Item</a></li>
+  <li><a href="#load-data" id="toc-load-data" class="nav-link" data-scroll-target="#load-data">Load data</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+<section id="lesson-22-stac-specification" class="level1">
+<h1>Lesson 22: STAC specification</h1>
+<p>EDS 220 - Working with Envrionmental Datasets (UCSB MEDS, Fall 2023)</p>
+<p>Notes from website &amp; lecture: So far in our course we have accessed data in two ways: by downloading it directly from the data provider or by loading a specific dataset via a URL. This can be a convenient way to access targeted datasets, often usign GUIs (graphical user interfaces) for data discovery and filtering. However, relying on clicking and copy-pasting addresses and file names can make our workflows more error-prone and less reproducible. In particular, satellites around the world produce terabytes of new data daily and manually browsing through data repositories would it make hard to access this data. Moreover, we wouldn’t want to learn a new way to access data from every single big data provider. This is where STAC comes in.</p>
+<p>The SpatioTemporal Asset Catalog (STAC) is an emerging open standard for geospatial data that aims to increase the interoperability of geospatial data, particularly satellite imagery. Major satellite imagery datasets like X, Y, and many others, now follow the STAC specification.</p>
+<p>In the next classes we’ll be working with the Microsoft’s Planetary Computer (MPC) STAC API. The MPC is both a geospatial coding environment and a STAC data catalogue. In this lesson we will learn about the main components of a STAC catalog and how to search for data using the MPC’s STAC API.</p>
+<section id="item-collection-and-catalog" class="level2">
+<h2 class="anchored" data-anchor-id="item-collection-and-catalog">22.1 Item, Collection, and Catalog</h2>
+<p>The STAC item (or just item) is the building block of a STAC. An item is a GeoJSON feature with additional fields that make it easier to find the item as we look for data across catalogs.</p>
+<p>An item holds two types of information:</p>
+<ol type="1">
+<li><p>Metadata: The metadata for a STAC item includes core identifying information (such as id, geometry, bounding box, and date), and additional properties (for example, place of collection).</p></li>
+<li><p>Assets: Assets are the links to the actual data of the item (for example, links to the spectral bands of a satellite image.)</p></li>
+</ol>
+<p>STAC items can be grouped into STAC collections (or just collections). For example, while a single satellite scene (at a single time and location) would constitue an item, scenes across time and location from the same satellite can be orgnanized in a collection. Finally, multiple collections can be organized into a single STAC catalog.</p>
+</section>
+<section id="api" class="level2">
+<h2 class="anchored" data-anchor-id="api">22.2 API</h2>
+<p>To request data from a catalog following the STAC standard we use an Application Programming Interface (API). We can think of an API as an intermediary tasked with sending our request for data to the data catalog and getting the response from the catalog back to us. The following is a nice real-life analogy:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://carmengg.github.io/eds-220-book/images/what-is-an-api.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">API Image</figcaption>
+</figure>
+</div>
+<p>The Python package to access APIs for STAC catalogs is pystac_client. Our goal in this lesson is to retrieve NAIP data from the MPC’s data catalog via its STAC API. We’ll be doing this within the MPC’s hub.</p>
+</section>
+<section id="catalog" class="level2">
+<h2 class="anchored" data-anchor-id="catalog">22.3 Catalog</h2>
+<div class="cell" data-tags="[]" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># our usual libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rioxarray <span class="im">as</span> rioxr</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Polygon</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># new!</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># used to access STAC catalogs</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pystac_client <span class="im">import</span> Client</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># used to sign items from the MPC STAC catalog</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> planetary_computer</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># ----- other libraries for nice ouputs</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>note: the microsoft planetary computer is only one STAC catalog, many satellites etc. have their own</p>
+<section id="access" class="level3">
+<h3 class="anchored" data-anchor-id="access">Access</h3>
+<p>We use the <code>Client</code> function from the <code>pystac_client</code> package to access the catalog:</p>
+<div class="cell" data-tags="[]" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># access catalog</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>catalog <span class="op">=</span> Client.<span class="bu">open</span>(</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"https://planetarycomputer.microsoft.com/api/stac/v1"</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    modifier <span class="op">=</span> planetary_computer.sign_inplace</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>The <code>modifier</code> parameter is needed to access the data in the MPC catalog.</p>
+</section>
+</section>
+<section id="exploration" class="level2">
+<h2 class="anchored" data-anchor-id="exploration">Exploration</h2>
+<p>Let’s check out some of the catalog’s metadata:</p>
+<div class="cell" data-tags="[]" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># metadata from the catalog</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"ID:"</span>, catalog.<span class="bu">id</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>ID: microsoft-pc</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Title:"</span>, catalog.title)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Description:"</span>, catalog.description)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Title: Microsoft Planetary Computer STAC API
+Description: Searchable spatiotemporal metadata describing Earth science datasets hosted by the Microsoft Planetary Computer</code></pre>
+</div>
+</div>
+<p>We can access its collections using the <code>get_collections()</code> method:</p>
+<div class="cell" data-tags="[]" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>catalog.get_collections()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>&lt;generator object Client.get_collections at 0x74dd946708c0&gt;</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Notice the output of <code>get_collections()</code> is a <strong>generator</strong>.</p></li>
+<li><p>This is a special kind of <em>lazy</em> object in Python which you can loop over like a list.</p></li>
+</ul>
+<p>Unlike a list, the items in a generator do not exist in memory until you explicitly iterate over them or convert them to a list.</p>
+<p>Let’s try getting the collections from the catalog again:</p>
+<div class="cell" data-tags="[]" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get collections and print their names</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>collections <span class="op">=</span> <span class="bu">list</span>(catalog.get_collections())</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of collections:"</span>, <span class="bu">len</span>(collections))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Collection IDs:"</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> collection <span class="kw">in</span> collections:</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'-'</span>, collection.<span class="bu">id</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Number of collections: 122
+Collection IDs:
+- daymet-annual-pr
+- daymet-daily-hi
+- 3dep-seamless
+- 3dep-lidar-dsm
+- fia
+- sentinel-1-rtc
+- gridmet
+- daymet-annual-na
+- daymet-monthly-na
+- daymet-annual-hi
+- daymet-monthly-hi
+- daymet-monthly-pr
+- gnatsgo-tables
+- hgb
+- cop-dem-glo-30
+- cop-dem-glo-90
+- goes-cmi
+- terraclimate
+- nasa-nex-gddp-cmip6
+- gpm-imerg-hhr
+- gnatsgo-rasters
+- 3dep-lidar-hag
+- 3dep-lidar-intensity
+- 3dep-lidar-pointsourceid
+- mtbs
+- noaa-c-cap
+- 3dep-lidar-copc
+- modis-64A1-061
+- alos-fnf-mosaic
+- 3dep-lidar-returns
+- mobi
+- landsat-c2-l2
+- era5-pds
+- chloris-biomass
+- kaza-hydroforecast
+- planet-nicfi-analytic
+- modis-17A2H-061
+- modis-11A2-061
+- daymet-daily-pr
+- 3dep-lidar-dtm-native
+- 3dep-lidar-classification
+- 3dep-lidar-dtm
+- gap
+- modis-17A2HGF-061
+- planet-nicfi-visual
+- gbif
+- modis-17A3HGF-061
+- modis-09A1-061
+- alos-dem
+- alos-palsar-mosaic
+- deltares-water-availability
+- modis-16A3GF-061
+- modis-21A2-061
+- us-census
+- jrc-gsw
+- deltares-floods
+- modis-43A4-061
+- modis-09Q1-061
+- modis-14A1-061
+- hrea
+- modis-13Q1-061
+- modis-14A2-061
+- sentinel-2-l2a
+- modis-15A2H-061
+- modis-11A1-061
+- modis-15A3H-061
+- modis-13A1-061
+- daymet-daily-na
+- nrcan-landcover
+- modis-10A2-061
+- ecmwf-forecast
+- noaa-mrms-qpe-24h-pass2
+- sentinel-1-grd
+- nasadem
+- io-lulc
+- landsat-c2-l1
+- drcog-lulc
+- chesapeake-lc-7
+- chesapeake-lc-13
+- chesapeake-lu
+- noaa-mrms-qpe-1h-pass1
+- noaa-mrms-qpe-1h-pass2
+- noaa-nclimgrid-monthly
+- goes-glm
+- usda-cdl
+- eclipse
+- esa-cci-lc
+- esa-cci-lc-netcdf
+- fws-nwi
+- usgs-lcmap-conus-v13
+- usgs-lcmap-hawaii-v10
+- noaa-climate-normals-tabular
+- noaa-climate-normals-netcdf
+- noaa-climate-normals-gridded
+- aster-l1t
+- cil-gdpcir-cc-by-sa
+- io-lulc-9-class
+- io-biodiversity
+- naip
+- noaa-cdr-sea-surface-temperature-whoi
+- noaa-cdr-ocean-heat-content
+- cil-gdpcir-cc0
+- cil-gdpcir-cc-by
+- noaa-cdr-sea-surface-temperature-whoi-netcdf
+- noaa-cdr-sea-surface-temperature-optimum-interpolation
+- modis-10A1-061
+- sentinel-5p-l2-netcdf
+- sentinel-3-olci-wfr-l2-netcdf
+- noaa-cdr-ocean-heat-content-netcdf
+- sentinel-3-synergy-aod-l2-netcdf
+- sentinel-3-synergy-v10-l2-netcdf
+- sentinel-3-olci-lfr-l2-netcdf
+- sentinel-3-sral-lan-l2-netcdf
+- sentinel-3-slstr-lst-l2-netcdf
+- sentinel-3-slstr-wst-l2-netcdf
+- sentinel-3-sral-wat-l2-netcdf
+- ms-buildings
+- sentinel-3-slstr-frp-l2-netcdf
+- sentinel-3-synergy-syn-l2-netcdf
+- sentinel-3-synergy-vgp-l2-netcdf
+- sentinel-3-synergy-vg1-l2-netcdf
+- esa-worldcover</code></pre>
+</div>
+</div>
+<ul>
+<li>we can see that this catalog has 122 collections</li>
+<li>we’ve worked with a few of these, including <code>naip</code></li>
+</ul>
+</section>
+<section id="collection" class="level2">
+<h2 class="anchored" data-anchor-id="collection">Collection</h2>
+<p>We can select a single collection for exploration using the <code>get_child()</code> method for the catalog and the collection id as the parameter”</p>
+<div class="cell" data-tags="[]" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>naip_collection <span class="op">=</span> catalog.get_child(<span class="st">"naip"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>naip_collection</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="7">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+    <div style="
+        width: 24px;
+        height: 24px;
+        background-color: #E1E1E1;
+        border: 3px solid #9D9D9D;
+        border-radius: 5px;
+        position: absolute;">
+    </div>
+    <div>
+        <details style="margin-left: 48px;">
+            <summary style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 0px; display: inline;" class="anchored">
+                    CollectionClient: naip
+                </h3>
+            </summary>
+            
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>id:</strong> naip</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> NAIP: National Agriculture Imagery Program</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>description:</strong> The [National Agriculture Imagery Program](https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/) (NAIP) provides U.S.-wide, high-resolution aerial imagery, with four spectral bands (R, G, B, IR). NAIP is administered by the [Aerial Field Photography Office](https://www.fsa.usda.gov/programs-and-services/aerial-photography/) (AFPO) within the [US Department of Agriculture](https://www.usda.gov/) (USDA). Data are captured at least once every three years for each state. This dataset represents NAIP data from 2010-present, in [cloud-optimized GeoTIFF](https://www.cogeo.org/) format.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>providers:</strong>
+<ul>
+<li><div>
+<a href="https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/">USDA Farm Service Agency</a> (<em>producer, licensor</em>)
+</div></li>
+<li><div>
+<a href="https://www.esri.com/">Esri</a> (<em>processor</em>)
+</div></li>
+<li><div>
+<a href="https://planetarycomputer.microsoft.com">Microsoft</a> (<em>host, processor</em>)
+</div></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> Collection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>item_assets:</strong> {'image': {'type': 'image/tiff; application=geotiff; profile=cloud-optimized', 'roles': ['data'], 'title': 'RGBIR COG tile', 'eo:bands': [{'name': 'Red', 'common_name': 'red'}, {'name': 'Green', 'common_name': 'green'}, {'name': 'Blue', 'common_name': 'blue'}, {'name': 'NIR', 'common_name': 'nir', 'description': 'near-infrared'}]}, 'metadata': {'type': 'text/plain', 'roles': ['metadata'], 'title': 'FGDC Metdata'}, 'thumbnail': {'type': 'image/jpeg', 'roles': ['thumbnail'], 'title': 'Thumbnail'}}</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>msft:region:</strong> westeurope</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>msft:container:</strong> naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>msft:storage_account:</strong> naipeuwest</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>msft:short_description:</strong> NAIP provides US-wide, high-resolution aerial imagery. This dataset includes NAIP images from 2010 to the present.</td>
+</tr>
+</tbody>
+</table>
+<section id="stac-extensions" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="stac-extensions">STAC Extensions</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/item-assets/v1.0.0/schema.json">https://stac-extensions.github.io/item-assets/v1.0.0/schema.json</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/table/v1.2.0/schema.json">https://stac-extensions.github.io/table/v1.2.0/schema.json</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="items" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored">Items</h4>
+<p><em>Only the first item shown</em></p>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #DBF5FF;
+        border: 3px solid #4CC9FF;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="item-hi_m_2015561_sw_05_060_20211226_20220909" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="item-hi_m_2015561_sw_05_060_20211226_20220909">Item: hi_m_2015561_sw_05_060_20211226_20220909</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>id:</strong> hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>bbox:</strong> [-155.502923, 19.997278, -155.434587, 20.065225]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>gsd:</strong> 0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>datetime:</strong> 2021-12-26T16:00:00Z</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>naip:year:</strong> 2021</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:bbox:</strong> [238224.0, 2213136.0, 245268.0, 2220558.0]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:epsg:</strong> 26905</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>providers:</strong> [{'url': 'https://www.fsa.usda.gov/programs-and-services/aerial-photography/imagery-programs/naip-imagery/', 'name': 'USDA Farm Service Agency', 'roles': ['producer', 'licensor']}]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>naip:state:</strong> hi</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:shape:</strong> [12370, 11740]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:transform:</strong> [0.6, 0.0, 238224.0, 0.0, -0.6, 2220558.0, 0.0, 0.0, 1.0]</td>
+</tr>
+</tbody>
+</table>
+<section id="stac-extensions-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="stac-extensions-1">STAC Extensions</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/eo/v1.0.0/schema.json">https://stac-extensions.github.io/eo/v1.0.0/schema.json</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/projection/v1.0.0/schema.json">https://stac-extensions.github.io/projection/v1.0.0/schema.json</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assets" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored">Assets</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rgbir-cog-tile" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-rgbir-cog-tile">Asset: RGBIR COG tile</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/hi/2021/hi_060cm_2021/20155/61/m_2015561_sw_05_060_20211226_20220909.tif</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/tiff; application=geotiff; profile=cloud-optimized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> RGBIR COG tile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['data']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>eo:bands:</strong> [{'name': 'Red', 'common_name': 'red'}, {'name': 'Green', 'common_name': 'green'}, {'name': 'Blue', 'common_name': 'blue'}, {'name': 'NIR', 'common_name': 'nir', 'description': 'near-infrared'}]</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-thumbnail" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-thumbnail">Asset: Thumbnail</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/hi/2021/hi_060cm_2021/20155/m_2015561_sw_05_060_20211226_20220909.200.jpg</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/jpeg</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Thumbnail</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['thumbnail']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-tilejson-with-default-rendering" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-tilejson-with-default-rendering">Asset: TileJSON with default rendering</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/tilejson.json?collection=naip&amp;item=hi_m_2015561_sw_05_060_20211226_20220909&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> TileJSON with default rendering</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['tiles']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rendered-preview" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-rendered-preview">Asset: Rendered preview</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=hi_m_2015561_sw_05_060_20211226_20220909&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/png</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Rendered preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['overview']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+<section id="links" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="links">Links</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> collection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-1" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-1">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> parent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-microsoft-planetary-computer-stac-api" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-microsoft-planetary-computer-stac-api">Link: Microsoft Planetary Computer STAC API</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> root</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Microsoft Planetary Computer STAC API</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-2" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-2">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> self</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip/items/hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/geo+json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-map-of-item" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-map-of-item">Link: Map of item</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/map?collection=naip&amp;item=hi_m_2015561_sw_05_060_20211226_20220909</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> text/html</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Map of item</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+</section>
+</div>
+</section>
+<section id="links-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="links-1">Links</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-3" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-3">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> items</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip/items</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/geo+json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-microsoft-planetary-computer-stac-api-1" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-microsoft-planetary-computer-stac-api-1">Link: Microsoft Planetary Computer STAC API</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> root</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Microsoft Planetary Computer STAC API</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-public-domain" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-public-domain">Link: Public Domain</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> license</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://www.fsa.usda.gov/help/policies-and-links/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Public Domain</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-human-readable-dataset-overview-and-reference" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-human-readable-dataset-overview-and-reference">Link: Human readable dataset overview and reference</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> describedby</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/dataset/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> text/html</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Human readable dataset overview and reference</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-4" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-4">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> self</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-microsoft-planetary-computer-stac-api-2" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" class="anchored" data-anchor-id="link-microsoft-planetary-computer-stac-api-2">Link: Microsoft Planetary Computer STAC API</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> parent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Microsoft Planetary Computer STAC API</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+<section id="assets-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" class="anchored">Assets</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-naip-thumbnail" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-naip-thumbnail">Asset: NAIP thumbnail</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://ai4edatasetspublicassets.blob.core.windows.net/assets/pc_thumbnails/naip.png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/png</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> NAIP thumbnail</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['thumbnail']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> naip</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-geoparquet-stac-items" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" class="anchored" data-anchor-id="asset-geoparquet-stac-items">Asset: GeoParquet STAC items</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> abfs://items/naip.parquet</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> application/x-parquet</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> GeoParquet STAC items</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>description:</strong> Snapshot of the collection's STAC items exported to GeoParquet format.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>roles:</strong> ['stac-items']</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>owner:</strong> naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>msft:partition_info:</strong> {'is_partitioned': True, 'partition_frequency': 'AS'}</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>table:storage_options:</strong> {'account_name': 'pcstacitems'}</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+
+        </section></details>
+    </div>
+</div>
+            
+        
+    
+
+        
+    </div>
+</div>
+</section>
+</section><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{ramji2023,
+  author = {Ramji, Anna},
+  title = {Test Python Post},
+  date = {2023-12-06},
+  url = {https://a-ramji.github.io/blog/2023-12-06-python-test/},
+  langid = {en}
+}
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-ramji2023" class="csl-entry quarto-appendix-citeas" role="listitem">
+Ramji, Anna. 2023. <span>“Test Python Post.”</span> December 6, 2023. <a href="https://a-ramji.github.io/blog/2023-12-06-python-test/">https://a-ramji.github.io/blog/2023-12-06-python-test/</a>.
+</div></div></section></div></main></div>
+
+
+<section id="catalog-search" class="level2">
+<h2 data-anchor-id="catalog-search">Catalog search</h2>
+<p>We can narrow the search withing the <code>catalog</code> by specifying a time range, an area of interest, and the collection name. The simplest ways to define the area of interest to look for data in the catalog are:</p>
+<ul>
+<li>a GeoJSON-type dictionary with the coordinates of the bounding box,</li>
+<li>as a list <code>[xmin, ymin, xmax, ymax]</code> with the coordinate values defining the four corners of the bounding box.</li>
+</ul>
+<p>You could also use a point, or some more complex polygon.</p>
+<p>In this lesson we will look for the NAIP scenes over Santa Barbara from 2018 to 2023. We’ll use the GeoJSON method to define the area of interest:</p>
+<div class="cell" data-tags="[]" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Temporal range of interest</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>time_range <span class="op">=</span> <span class="st">"2018-01-01/2023-01-01"</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># NCEAS bounding box (as a GeoJSON)</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>bbox <span class="op">=</span> {</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"type"</span>: <span class="st">"Polygon"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"coordinates"</span>:[</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        [</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>            [<span class="op">-</span><span class="fl">119.70608227128903</span>, <span class="fl">34.426300194372274</span>],</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>            [<span class="op">-</span><span class="fl">119.70608227128903</span>, <span class="fl">34.42041139020533</span>],</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>            [<span class="op">-</span><span class="fl">119.6967885126002</span>, <span class="fl">34.42041139020533</span>],</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>            [<span class="op">-</span><span class="fl">119.6967885126002</span>, <span class="fl">34.426300194372274</span>],</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>            [<span class="op">-</span><span class="fl">119.70608227128903</span>, <span class="fl">34.426300194372274</span>]</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        ]</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    ],</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="9">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># catalog search</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>search <span class="op">=</span> catalog.search(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    collections <span class="op">=</span> [<span class="st">"naip"</span>],</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    intersects <span class="op">=</span> bbox,</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    datetime <span class="op">=</span> time_range)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>search</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>&lt;pystac_client.item_search.ItemSearch at 0x74dd0ea15b50&gt;</code></pre>
+</div>
+</div>
+<p>To get the items found in the search (or check if there were any matches in the search) we use teh <code>item_collection()</code> method:</p>
+<div class="cell" data-tags="[]" data-execution_count="10">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>items <span class="op">=</span> search.item_collection()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(items)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>2</code></pre>
+</div>
+</div>
+<p>This output tells us there were two items in the catalog that matched our search!</p>
+<div class="cell" data-tags="[]" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>items</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="11">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+    <div style="
+        width: 24px;
+        height: 24px;
+        background-color: #E1E1E1;
+        border: 3px solid #9D9D9D;
+        border-radius: 5px;
+        position: absolute;">
+    </div>
+    <div>
+        <details style="margin-left: 48px;">
+            <summary style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 0px; display: inline;">
+                    ItemCollection
+                </h3>
+            </summary>
+            
+<section id="items" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;">Items</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #DBF5FF;
+        border: 3px solid #4CC9FF;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="item-ca_m_3411935_sw_11_060_20200521" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="item-ca_m_3411935_sw_11_060_20200521">Item: ca_m_3411935_sw_11_060_20200521</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>id:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>bbox:</strong> [-119.754272, 34.371741, -119.683292, 34.440724]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>gsd:</strong> 0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>datetime:</strong> 2020-05-21T00:00:00Z</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>naip:year:</strong> 2020</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:bbox:</strong> [246930.0, 3806808.0, 253260.0, 3814296.0]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:epsg:</strong> 26911</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>naip:state:</strong> ca</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:shape:</strong> [12480, 10550]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:transform:</strong> [0.6, 0.0, 246930.0, 0.0, -0.6, 3814296.0, 0.0, 0.0, 1.0]</td>
+</tr>
+</tbody>
+</table>
+<section id="stac-extensions" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" data-anchor-id="stac-extensions">STAC Extensions</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/eo/v1.0.0/schema.json">https://stac-extensions.github.io/eo/v1.0.0/schema.json</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/projection/v1.0.0/schema.json">https://stac-extensions.github.io/projection/v1.0.0/schema.json</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assets" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;">Assets</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rgbir-cog-tile" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-rgbir-cog-tile">Asset: RGBIR COG tile</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2020/ca_060cm_2020/34119/m_3411935_sw_11_060_20200521.tif?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/tiff; application=geotiff; profile=cloud-optimized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> RGBIR COG tile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['data']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>eo:bands:</strong> [{'name': 'Red', 'common_name': 'red'}, {'name': 'Green', 'common_name': 'green'}, {'name': 'Blue', 'common_name': 'blue'}, {'name': 'NIR', 'common_name': 'nir', 'description': 'near-infrared'}]</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-thumbnail" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-thumbnail">Asset: Thumbnail</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2020/ca_060cm_2020/34119/m_3411935_sw_11_060_20200521.200.jpg?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/jpeg</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Thumbnail</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['thumbnail']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-tilejson-with-default-rendering" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-tilejson-with-default-rendering">Asset: TileJSON with default rendering</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/tilejson.json?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> TileJSON with default rendering</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['tiles']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rendered-preview" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-rendered-preview">Asset: Rendered preview</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/png</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Rendered preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['overview']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+<section id="links" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" data-anchor-id="links">Links</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> collection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-1" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-1">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> parent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-microsoft-planetary-computer-stac-api" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-microsoft-planetary-computer-stac-api">Link: Microsoft Planetary Computer STAC API</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> root</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Microsoft Planetary Computer STAC API</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-2" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-2">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> self</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip/items/ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/geo+json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-map-of-item" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-map-of-item">Link: Map of item</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/map?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> text/html</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Map of item</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #DBF5FF;
+        border: 3px solid #4CC9FF;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="item-ca_m_3411935_sw_11_060_20180724_20190209" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="item-ca_m_3411935_sw_11_060_20180724_20190209">Item: ca_m_3411935_sw_11_060_20180724_20190209</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>id:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>bbox:</strong> [-119.753736, 34.372185, -119.683827, 34.44028]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>gsd:</strong> 0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>datetime:</strong> 2018-07-24T00:00:00Z</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>naip:year:</strong> 2018</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:bbox:</strong> [246978.0, 3806856.0, 253212.0, 3814248.0]</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:epsg:</strong> 26911</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>naip:state:</strong> ca</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>proj:shape:</strong> [12320, 10390]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>proj:transform:</strong> [0.6, 0.0, 246978.0, 0.0, -0.6, 3814248.0, 0.0, 0.0, 1.0]</td>
+</tr>
+</tbody>
+</table>
+<section id="stac-extensions-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" data-anchor-id="stac-extensions-1">STAC Extensions</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/eo/v1.0.0/schema.json">https://stac-extensions.github.io/eo/v1.0.0/schema.json</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://stac-extensions.github.io/projection/v1.0.0/schema.json">https://stac-extensions.github.io/projection/v1.0.0/schema.json</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="assets-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;">Assets</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rgbir-cog-tile-1" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-rgbir-cog-tile-1">Asset: RGBIR COG tile</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2018/ca_060cm_2018/34119/m_3411935_sw_11_060_20180724_20190209.tif?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/tiff; application=geotiff; profile=cloud-optimized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> RGBIR COG tile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['data']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>eo:bands:</strong> [{'name': 'Red', 'common_name': 'red'}, {'name': 'Green', 'common_name': 'green'}, {'name': 'Blue', 'common_name': 'blue'}, {'name': 'NIR', 'common_name': 'nir', 'description': 'near-infrared'}]</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-fgdc-metdata" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-fgdc-metdata">Asset: FGDC Metdata</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2018/ca_fgdc_2018/34119/m_3411935_sw_11_060_20180724.txt?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> text/plain</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> FGDC Metdata</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['metadata']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-thumbnail-1" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-thumbnail-1">Asset: Thumbnail</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2018/ca_060cm_2018/34119/m_3411935_sw_11_060_20180724_20190209.200.jpg?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/jpeg</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Thumbnail</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['thumbnail']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-tilejson-with-default-rendering-1" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-tilejson-with-default-rendering-1">Asset: TileJSON with default rendering</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/tilejson.json?collection=naip&amp;item=ca_m_3411935_sw_11_060_20180724_20190209&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> TileJSON with default rendering</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['tiles']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="asset-rendered-preview-1" class="level3" style="margin-bottom: 0px; display: inline;">
+<h3 style="margin-bottom: 0px; display: inline;" data-anchor-id="asset-rendered-preview-1">Asset: Rendered preview</h3>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=ca_m_3411935_sw_11_060_20180724_20190209&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/png</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> Rendered preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['overview']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+<section id="links-1" class="level4" style="margin-bottom: 0px; display: inline;">
+<h4 style="margin-bottom: 0px; display: inline;" data-anchor-id="links-1">Links</h4>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-3" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-3">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> collection</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-4" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-4">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> parent</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-microsoft-planetary-computer-stac-api-1" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-microsoft-planetary-computer-stac-api-1">Link: Microsoft Planetary Computer STAC API</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> root</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/json</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Microsoft Planetary Computer STAC API</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-5" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-5">Link:</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> self</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/stac/v1/collections/naip/items/ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> application/geo+json</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+<div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FFF7E5;
+        border: 3px solid #FF6132;
+        border-radius: 5px;
+        position: absolute;">
+
+</div>
+<section id="link-map-of-item-1" class="level4" style="margin-left: 48px;">
+<h4 style="margin-bottom: 0px;" data-anchor-id="link-map-of-item-1">Link: Map of item</h4>
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>rel:</strong> preview</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>href:</strong> https://planetarycomputer.microsoft.com/api/data/v1/item/map?collection=naip&amp;item=ca_m_3411935_sw_11_060_20180724_20190209</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>type:</strong> text/html</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>title:</strong> Map of item</td>
+</tr>
+</tbody>
+</table>
+</section>
+</div>
+</section>
+</section>
+</div>
+
+        
+    </section></details></div>
+</div>
+            
+        
+    
+        
+    </div>
+</div>
+                    
+                
+            
+        
+    
+
+</section>
+
+
+
+<section id="item" class="level2">
+<h2 data-anchor-id="item">Item</h2>
+<p>Let’s get the first item in the search:</p>
+<div class="cell" data-tags="[]" data-execution_count="12">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get first item in the catalog search</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>item <span class="op">=</span> items[<span class="dv">0</span>]</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(item)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>pystac.item.Item</code></pre>
+</div>
+</div>
+<p>Remember the <a href="https://pystac.readthedocs.io/en/stable/api/pystac.html#pystac.Item">STAC item</a> is the core objeect in the catalog.</p>
+<p>The item does not contain the data itself, but rather metadata about and links to access the actual data (assets).</p>
+<p>Some of the metadata:</p>
+<div class="cell" data-tags="[]" data-execution_count="13">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print item id and properties</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'id:'</span>, item.<span class="bu">id</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>item.properties</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>id: ca_m_3411935_sw_11_060_20200521</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>{'gsd': 0.6,
+ 'datetime': '2020-05-21T00:00:00Z',
+ 'naip:year': '2020',
+ 'proj:bbox': [246930.0, 3806808.0, 253260.0, 3814296.0],
+ 'proj:epsg': 26911,
+ 'naip:state': 'ca',
+ 'proj:shape': [12480, 10550],
+ 'proj:transform': [0.6, 0.0, 246930.0, 0.0, -0.6, 3814296.0, 0.0, 0.0, 1.0]}</code></pre>
+</div>
+</div>
+<p>Just like the item properties, the item assets are given in a dictionary, with each value being a <a href="https://pystac.readthedocs.io/en/stable/api/asset.html">pystac.asset</a>.</p>
+<p>Let’s check the assets in the <code>item</code>:</p>
+<div class="cell" data-tags="[]" data-execution_count="14">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>item.assets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>{'image': &lt;Asset href=https://naipeuwest.blob.core.windows.net/naip/v002/ca/2020/ca_060cm_2020/34119/m_3411935_sw_11_060_20200521.tif?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D&gt;,
+ 'thumbnail': &lt;Asset href=https://naipeuwest.blob.core.windows.net/naip/v002/ca/2020/ca_060cm_2020/34119/m_3411935_sw_11_060_20200521.200.jpg?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D&gt;,
+ 'tilejson': &lt;Asset href=https://planetarycomputer.microsoft.com/api/data/v1/item/tilejson.json?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png&gt;,
+ 'rendered_preview': &lt;Asset href=https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png&gt;}</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="15">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>item.assets[<span class="st">'image'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="15">
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-mod-trusted jp-OutputArea-output">
+    <div style="
+        width: 24px;
+        height: 24px;
+        background-color: #FED7E5;
+        border: 3px solid #FA4C8C;
+        border-radius: 5px;
+        position: absolute;">
+    </div>
+    <div>
+        <details style="margin-left: 48px;">
+            <summary style="margin-bottom: 20px;">
+                <h3 style="margin-bottom: 0px; display: inline;">Asset:  RGBIR COG tile </h3>
+            </summary>
+            
+<table data-quarto-postprocess="true" class="table table-sm table-striped small">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>href:</strong> https://naipeuwest.blob.core.windows.net/naip/v002/ca/2020/ca_060cm_2020/34119/m_3411935_sw_11_060_20200521.tif?st=2023-11-26T21%3A44%3A14Z&amp;se=2023-12-04T21%3A44%3A14Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A13Z&amp;ske=2023-12-04T21%3A44%3A13Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=Zgrq/7FIK9rtnrkUpkcfE2TQud7lJPoS%2BoApQo5m5A0%3D</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>type:</strong> image/tiff; application=geotiff; profile=cloud-optimized</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>title:</strong> RGBIR COG tile</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>roles:</strong> ['data']</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>owner:</strong> ca_m_3411935_sw_11_060_20200521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>eo:bands:</strong> [{'name': 'Red', 'common_name': 'red'}, {'name': 'Green', 'common_name': 'green'}, {'name': 'Blue', 'common_name': 'blue'}, {'name': 'NIR', 'common_name': 'nir', 'description': 'near-infrared'}]</td>
+</tr>
+</tbody>
+</table>
+
+        </details>
+    </div>
+</div>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>item.assets[<span class="st">'image'</span>].title</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>'RGBIR COG tile'</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> item.assets.keys():</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, <span class="st">'--'</span>, item.assets[key].title) </span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print key, separator, print / access the item assets of that key, get the title</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>image -- RGBIR COG tile
+thumbnail -- Thumbnail
+tilejson -- TileJSON with default rendering
+rendered_preview -- Rendered preview</code></pre>
+</div>
+</div>
+<p>Note: - each asset has an <code>href</code>, which is a link to the asset object (i.e., the actual data)</p>
+<p>For example, we can use the URL for the rendered preview asset to plot it:</p>
+<div class="cell" data-tags="[]" data-execution_count="18">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>item.assets[<span class="st">'rendered_preview'</span>].href</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>'https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png'</code></pre>
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="19">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot rendered preview</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>Image(url<span class="op">=</span>item.assets[<span class="st">'rendered_preview'</span>].href, width <span class="op">=</span> <span class="dv">500</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<img src="https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=naip&amp;item=ca_m_3411935_sw_11_060_20200521&amp;assets=image&amp;asset_bidx=image%7C1%2C2%2C3&amp;format=png" width="500">
+</div>
+</div>
+<p>Looks like Santa Barbara! Nice!</p>
+</section>
+<section id="load-data" class="level2">
+<h2 data-anchor-id="load-data">Load data</h2>
+<p>The raster data in our current <code>item</code> is in the <code>image</code> asset.</p>
+<p>Again, we access this data via its URL. This time, we open it using <code>rioxr.open_rasterio()</code> directly:</p>
+<div class="cell" data-tags="[]" data-execution_count="20">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>sb <span class="op">=</span> rioxr.open_rasterio(item.assets[<span class="st">'image'</span>].href)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="20">
+
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray (band: 4, y: 12480, x: 10550)&gt;
+[526656000 values with dtype=uint8]
+Coordinates:
+  * band         (band) int64 1 2 3 4
+  * x            (x) float64 2.469e+05 2.469e+05 ... 2.533e+05 2.533e+05
+  * y            (y) float64 3.814e+06 3.814e+06 ... 3.807e+06 3.807e+06
+    spatial_ref  int64 0
+Attributes:
+    AREA_OR_POINT:             Area
+    TIFFTAG_IMAGEDESCRIPTION:  OrthoVista
+    TIFFTAG_RESOLUTIONUNIT:    1 (unitless)
+    TIFFTAG_SOFTWARE:          Trimble Germany GmbH
+    TIFFTAG_XRESOLUTION:       1
+    TIFFTAG_YRESOLUTION:       1
+    _FillValue:                0
+    scale_factor:              1.0
+    add_offset:                0.0</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">band</span>: 4</li><li><span class="xr-has-index">y</span>: 12480</li><li><span class="xr-has-index">x</span>: 10550</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-20f04d59-cafb-4cd3-b896-3c461e349cb3" class="xr-array-in" type="checkbox" checked=""><label for="section-20f04d59-cafb-4cd3-b896-3c461e349cb3" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>...</span></div><div class="xr-array-data"><pre>[526656000 values with dtype=uint8]</pre></div></div></li><li class="xr-section-item"><input id="section-cc7804af-c683-4c12-8349-ae1fb11a2e3e" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-cc7804af-c683-4c12-8349-ae1fb11a2e3e" class="xr-section-summary">Coordinates: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">band</span></div><div class="xr-var-dims">(band)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1 2 3 4</div><input id="attrs-2fc6f16e-c4d1-4124-86b1-36f4ec0497c0" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-2fc6f16e-c4d1-4124-86b1-36f4ec0497c0" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-102b3c39-f93d-490b-82e5-139eccf0c414" class="xr-var-data-in" type="checkbox"><label for="data-102b3c39-f93d-490b-82e5-139eccf0c414" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1, 2, 3, 4])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">x</span></div><div class="xr-var-dims">(x)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">2.469e+05 2.469e+05 ... 2.533e+05</div><input id="attrs-e7da8661-d8ae-4fc9-bcfc-977ee690db72" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-e7da8661-d8ae-4fc9-bcfc-977ee690db72" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-0f68df78-46d1-41c9-9784-7be9c209a386" class="xr-var-data-in" type="checkbox"><label for="data-0f68df78-46d1-41c9-9784-7be9c209a386" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([246930.3, 246930.9, 246931.5, ..., 253258.5, 253259.1, 253259.7])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">y</span></div><div class="xr-var-dims">(y)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">3.814e+06 3.814e+06 ... 3.807e+06</div><input id="attrs-15a89eb7-e9ac-4453-826e-6b5fc07032f5" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-15a89eb7-e9ac-4453-826e-6b5fc07032f5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-8a52d64d-9c95-4bb1-99b8-91c02e672504" class="xr-var-data-in" type="checkbox"><label for="data-8a52d64d-9c95-4bb1-99b8-91c02e672504" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([3814295.7, 3814295.1, 3814294.5, ..., 3806809.5, 3806808.9, 3806808.3])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>spatial_ref</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0</div><input id="attrs-1ef3146f-7290-4149-9eda-1c9c8889aae5" class="xr-var-attrs-in" type="checkbox"><label for="attrs-1ef3146f-7290-4149-9eda-1c9c8889aae5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-b2424a36-f6c0-41fe-8d6e-ff3dcb3648e7" class="xr-var-data-in" type="checkbox"><label for="data-b2424a36-f6c0-41fe-8d6e-ff3dcb3648e7" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>crs_wkt :</span></dt><dd>PROJCS["NAD83 / UTM zone 11N",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-117],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","26911"]]</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd><dt><span>semi_minor_axis :</span></dt><dd>6356752.314140356</dd><dt><span>inverse_flattening :</span></dt><dd>298.257222101</dd><dt><span>reference_ellipsoid_name :</span></dt><dd>GRS 1980</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>prime_meridian_name :</span></dt><dd>Greenwich</dd><dt><span>geographic_crs_name :</span></dt><dd>NAD83</dd><dt><span>horizontal_datum_name :</span></dt><dd>North American Datum 1983</dd><dt><span>projected_crs_name :</span></dt><dd>NAD83 / UTM zone 11N</dd><dt><span>grid_mapping_name :</span></dt><dd>transverse_mercator</dd><dt><span>latitude_of_projection_origin :</span></dt><dd>0.0</dd><dt><span>longitude_of_central_meridian :</span></dt><dd>-117.0</dd><dt><span>false_easting :</span></dt><dd>500000.0</dd><dt><span>false_northing :</span></dt><dd>0.0</dd><dt><span>scale_factor_at_central_meridian :</span></dt><dd>0.9996</dd><dt><span>spatial_ref :</span></dt><dd>PROJCS["NAD83 / UTM zone 11N",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-117],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","26911"]]</dd><dt><span>GeoTransform :</span></dt><dd>246930.0 0.6 0.0 3814296.0 0.0 -0.6</dd></dl></div><div class="xr-var-data"><pre>array(0)</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-59bfb8b7-62b9-452c-be74-6975383f02f9" class="xr-section-summary-in" type="checkbox"><label for="section-59bfb8b7-62b9-452c-be74-6975383f02f9" class="xr-section-summary">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>band</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-ac5fcc72-5d30-4a29-bfe5-a8785554485d" class="xr-index-data-in" type="checkbox"><label for="index-ac5fcc72-5d30-4a29-bfe5-a8785554485d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([1, 2, 3, 4], dtype='int64', name='band'))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>x</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-6ad1c181-48f4-4b77-867d-21490a25f2c0" class="xr-index-data-in" type="checkbox"><label for="index-6ad1c181-48f4-4b77-867d-21490a25f2c0" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([          246930.3,           246930.9,           246931.5,
+       246932.09999999998, 246932.69999999998,           246933.3,
+                 246933.9,           246934.5, 246935.09999999998,
+       246935.69999999998,
+       ...
+                 253254.3,           253254.9,           253255.5,
+       253256.09999999998, 253256.69999999998,           253257.3,
+                 253257.9,           253258.5, 253259.09999999998,
+       253259.69999999998],
+      dtype='float64', name='x', length=10550))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>y</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-da6b1944-681d-4312-bfbf-f9edc989d1f5" class="xr-index-data-in" type="checkbox"><label for="index-da6b1944-681d-4312-bfbf-f9edc989d1f5" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([         3814295.7,          3814295.1,          3814294.5,
+       3814293.9000000004, 3814293.3000000003,          3814292.7,
+                3814292.1,          3814291.5, 3814290.9000000004,
+       3814290.3000000003,
+       ...
+                3806813.7,          3806813.1,          3806812.5,
+       3806811.9000000004, 3806811.3000000003,          3806810.7,
+                3806810.1,          3806809.5, 3806808.9000000004,
+       3806808.3000000003],
+      dtype='float64', name='y', length=12480))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-86e02484-5628-478c-aa77-010fcb947fb8" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-86e02484-5628-478c-aa77-010fcb947fb8" class="xr-section-summary">Attributes: <span>(9)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>AREA_OR_POINT :</span></dt><dd>Area</dd><dt><span>TIFFTAG_IMAGEDESCRIPTION :</span></dt><dd>OrthoVista</dd><dt><span>TIFFTAG_RESOLUTIONUNIT :</span></dt><dd>1 (unitless)</dd><dt><span>TIFFTAG_SOFTWARE :</span></dt><dd>Trimble Germany GmbH</dd><dt><span>TIFFTAG_XRESOLUTION :</span></dt><dd>1</dd><dt><span>TIFFTAG_YRESOLUTION :</span></dt><dd>1</dd><dt><span>_FillValue :</span></dt><dd>0</dd><dt><span>scale_factor :</span></dt><dd>1.0</dd><dt><span>add_offset :</span></dt><dd>0.0</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+<p>Notice this raster has four bands (R, G, B, NIR). So we cannot use the <code>.plot.imshow()</code> method directly (as this function only works when we have three bands).</p>
+<p>Thus we need select the bands we want to plot (RGB) before plotting:</p>
+<div class="cell" data-tags="[]" data-execution_count="21">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot raster with the correct ratio</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>size <span class="op">=</span> <span class="dv">6</span> <span class="co"># height in inches of plot height</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>aspect <span class="op">=</span> sb.rio.width <span class="op">/</span> sb.rio.height <span class="co"># aspect ratio</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co"># select R, G, B bands (in that order) and plot</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>sb.sel(band <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>]).plot.imshow(size<span class="op">=</span>size, aspect<span class="op">=</span>aspect)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>&lt;matplotlib.image.AxesImage at 0x74dd0fb9d610&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="STAC-search_files/figure-html/cell-22-output-2.png" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="exercise" class="level2">
+<h2 data-anchor-id="exercise">Exercise</h2>
+<p>The <code>cop-dem-glo-90</code> collection contains the Copernicus DEM at 90m resolution (the data we previously used for the Grand Canyon).</p>
+<ol type="1">
+<li>Reuse the <code>bbox</code> for Santa Barbara to look for items in this collection.</li>
+<li>Get the first item in the search and check its assets.</li>
+<li>Check the item’s rendered preview asset by clicking on it’s URL. 4 Open the item’s data using rioxarray.</li>
+</ol>
+<div class="cell" data-tags="[]" data-execution_count="22">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># catalog search</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>search <span class="op">=</span> catalog.search(</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>    collections <span class="op">=</span> [<span class="st">"cop-dem-glo-90"</span>],</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>    intersects <span class="op">=</span> bbox,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    datetime <span class="op">=</span> time_range)</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>search</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>&lt;pystac_client.item_search.ItemSearch at 0x74dd0e07ac50&gt;</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="26">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>cop_items <span class="op">=</span> search.item_collection()</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>cop_item <span class="op">=</span> cop_items[<span class="dv">0</span>]</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="co"># print item id and properties</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'id:'</span> , cop_item.<span class="bu">id</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="27">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>cop_item.properties</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>{'gsd': 90,
+ 'datetime': '2021-04-22T00:00:00Z',
+ 'platform': 'TanDEM-X',
+ 'proj:epsg': 4326,
+ 'proj:shape': [1200, 1200],
+ 'proj:transform': [0.0008333333333333334,
+  0.0,
+  -120.00041666666667,
+  0.0,
+  -0.0008333333333333334,
+  35.000416666666666]}</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="28">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>cop_item.assets</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<pre><code>{'data': &lt;Asset href=https://elevationeuwest.blob.core.windows.net/copernicus-dem/COP90_hh/Copernicus_DSM_COG_30_N34_00_W120_00_DEM.tif?st=2023-11-26T21%3A44%3A38Z&amp;se=2023-12-04T21%3A44%3A39Z&amp;sp=rl&amp;sv=2021-06-08&amp;sr=c&amp;skoid=c85c15d6-d1ae-42d4-af60-e2ca0f81359b&amp;sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;skt=2023-11-27T21%3A44%3A37Z&amp;ske=2023-12-04T21%3A44%3A37Z&amp;sks=b&amp;skv=2021-06-08&amp;sig=rJttXeGQMQwVuMKH1Ea00s5SrW5FuZo4gNRFfv6J3YU%3D&gt;,
+ 'tilejson': &lt;Asset href=https://planetarycomputer.microsoft.com/api/data/v1/item/tilejson.json?collection=cop-dem-glo-90&amp;item=Copernicus_DSM_COG_30_N34_00_W120_00_DEM&amp;assets=data&amp;colormap_name=terrain&amp;rescale=-1000%2C4000&amp;format=png&gt;,
+ 'rendered_preview': &lt;Asset href=https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=cop-dem-glo-90&amp;item=Copernicus_DSM_COG_30_N34_00_W120_00_DEM&amp;assets=data&amp;colormap_name=terrain&amp;rescale=-1000%2C4000&amp;format=png&gt;}</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="29">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key <span class="kw">in</span> cop_item.assets.keys():</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(key, <span class="st">'--'</span>, cop_item.assets[key].title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>data -- N34_00_W120_00
+tilejson -- TileJSON with default rendering
+rendered_preview -- Rendered preview</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="24">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plot rendered preview</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>Image(url<span class="op">=</span>cop_item.assets[<span class="st">'rendered_preview'</span>].href, width<span class="op">=</span><span class="dv">500</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<img src="https://planetarycomputer.microsoft.com/api/data/v1/item/preview.png?collection=cop-dem-glo-90&amp;item=Copernicus_DSM_COG_30_N34_00_W120_00_DEM&amp;assets=data&amp;colormap_name=terrain&amp;rescale=-1000%2C4000&amp;format=png" width="500">
+</div>
+</div>
+<div class="cell" data-tags="[]" data-execution_count="30">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>dem <span class="op">=</span> rioxr.open_rasterio(cop_item.assets[<span class="st">'data'</span>].href)</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>dem</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="30">
+
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray (band: 1, y: 1200, x: 1200)&gt;
+[1440000 values with dtype=float32]
+Coordinates:
+  * band         (band) int64 1
+  * x            (x) float64 -120.0 -120.0 -120.0 ... -119.0 -119.0 -119.0
+  * y            (y) float64 35.0 35.0 35.0 35.0 35.0 ... 34.0 34.0 34.0 34.0
+    spatial_ref  int64 0
+Attributes:
+    AREA_OR_POINT:  Point
+    scale_factor:   1.0
+    add_offset:     0.0</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">band</span>: 1</li><li><span class="xr-has-index">y</span>: 1200</li><li><span class="xr-has-index">x</span>: 1200</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-ea09776e-fb5f-473e-aff2-74793470debe" class="xr-array-in" type="checkbox" checked=""><label for="section-ea09776e-fb5f-473e-aff2-74793470debe" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>...</span></div><div class="xr-array-data"><pre>[1440000 values with dtype=float32]</pre></div></div></li><li class="xr-section-item"><input id="section-b60679a4-5483-4c59-8d12-d63ccab2fd70" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-b60679a4-5483-4c59-8d12-d63ccab2fd70" class="xr-section-summary">Coordinates: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">band</span></div><div class="xr-var-dims">(band)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1</div><input id="attrs-7ab5f0de-e605-4071-b9a2-667399e2d6ad" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-7ab5f0de-e605-4071-b9a2-667399e2d6ad" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-0314cc66-9ef3-408e-8238-e4b03eff062f" class="xr-var-data-in" type="checkbox"><label for="data-0314cc66-9ef3-408e-8238-e4b03eff062f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([1])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">x</span></div><div class="xr-var-dims">(x)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-120.0 -120.0 ... -119.0 -119.0</div><input id="attrs-e819bf17-1718-4918-94d6-e8917a652a26" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-e819bf17-1718-4918-94d6-e8917a652a26" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-a92987cb-ecab-4a71-8787-d450f57727b2" class="xr-var-data-in" type="checkbox"><label for="data-a92987cb-ecab-4a71-8787-d450f57727b2" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([-120.      , -119.999167, -119.998333, ..., -119.0025  , -119.001667,
+       -119.000833])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">y</span></div><div class="xr-var-dims">(y)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">35.0 35.0 35.0 ... 34.0 34.0 34.0</div><input id="attrs-63a27ad1-4ff5-419e-aa5c-747146c62b6f" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-63a27ad1-4ff5-419e-aa5c-747146c62b6f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-895e1ecf-adbd-4b65-94e6-c2d2bf7380c0" class="xr-var-data-in" type="checkbox"><label for="data-895e1ecf-adbd-4b65-94e6-c2d2bf7380c0" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([35.      , 34.999167, 34.998333, ..., 34.0025  , 34.001667, 34.000833])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>spatial_ref</span></div><div class="xr-var-dims">()</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0</div><input id="attrs-cb39fa58-82cf-4c19-b017-71650c92fff8" class="xr-var-attrs-in" type="checkbox"><label for="attrs-cb39fa58-82cf-4c19-b017-71650c92fff8" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-c80a8882-070a-4218-a212-ef8cc5539f57" class="xr-var-data-in" type="checkbox"><label for="data-c80a8882-070a-4218-a212-ef8cc5539f57" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>crs_wkt :</span></dt><dd>GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</dd><dt><span>semi_major_axis :</span></dt><dd>6378137.0</dd><dt><span>semi_minor_axis :</span></dt><dd>6356752.314245179</dd><dt><span>inverse_flattening :</span></dt><dd>298.257223563</dd><dt><span>reference_ellipsoid_name :</span></dt><dd>WGS 84</dd><dt><span>longitude_of_prime_meridian :</span></dt><dd>0.0</dd><dt><span>prime_meridian_name :</span></dt><dd>Greenwich</dd><dt><span>geographic_crs_name :</span></dt><dd>WGS 84</dd><dt><span>horizontal_datum_name :</span></dt><dd>World Geodetic System 1984</dd><dt><span>grid_mapping_name :</span></dt><dd>latitude_longitude</dd><dt><span>spatial_ref :</span></dt><dd>GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AXIS["Latitude",NORTH],AXIS["Longitude",EAST],AUTHORITY["EPSG","4326"]]</dd><dt><span>GeoTransform :</span></dt><dd>-120.00041666666667 0.0008333333333333334 0.0 35.000416666666666 0.0 -0.0008333333333333334</dd></dl></div><div class="xr-var-data"><pre>array(0)</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-ef9aa894-ff72-4212-b20e-3da7c41f6624" class="xr-section-summary-in" type="checkbox"><label for="section-ef9aa894-ff72-4212-b20e-3da7c41f6624" class="xr-section-summary">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>band</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-c74fb4da-9e97-43a6-8418-195c82ae3720" class="xr-index-data-in" type="checkbox"><label for="index-c74fb4da-9e97-43a6-8418-195c82ae3720" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([1], dtype='int64', name='band'))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>x</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-073235ea-f4b1-4bf1-b679-e21c66dfd16f" class="xr-index-data-in" type="checkbox"><label for="index-073235ea-f4b1-4bf1-b679-e21c66dfd16f" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([             -120.0, -119.99916666666667, -119.99833333333333,
+                 -119.9975, -119.99666666666667, -119.99583333333334,
+                  -119.995, -119.99416666666667, -119.99333333333334,
+                 -119.9925,
+       ...
+       -119.00833333333334,           -119.0075, -119.00666666666666,
+       -119.00583333333333,            -119.005, -119.00416666666666,
+       -119.00333333333333,           -119.0025, -119.00166666666667,
+       -119.00083333333333],
+      dtype='float64', name='x', length=1200))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>y</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-6e5afcfe-04c9-41d3-a143-953584410056" class="xr-index-data-in" type="checkbox"><label for="index-6e5afcfe-04c9-41d3-a143-953584410056" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([              35.0,  34.99916666666667, 34.998333333333335,
+                  34.9975,  34.99666666666667,  34.99583333333333,
+                   34.995, 34.994166666666665,  34.99333333333333,
+                  34.9925,
+       ...
+        34.00833333333333,            34.0075,  34.00666666666667,
+       34.005833333333335,             34.005,  34.00416666666667,
+        34.00333333333333,            34.0025, 34.001666666666665,
+        34.00083333333333],
+      dtype='float64', name='y', length=1200))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-8a6c5c3a-f190-4ff5-ba42-5063186965f2" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-8a6c5c3a-f190-4ff5-ba42-5063186965f2" class="xr-section-summary">Attributes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>AREA_OR_POINT :</span></dt><dd>Point</dd><dt><span>scale_factor :</span></dt><dd>1.0</dd><dt><span>add_offset :</span></dt><dd>0.0</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+
+
+</section>
+
+
+ <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+ <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2023, Anna Ramji</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/a-ramji">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>
