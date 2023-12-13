@@ -1,6 +1,8 @@
 [
   {
     "listing": "/blog.html",
-    "items": []
+    "items": [
+      "/blog/thomas-fire/thomas-fire-analysis-blog.html"
+    ]
   }
 ]
