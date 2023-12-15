@@ -17,7 +17,7 @@ bibliography: references.bib
 citation: 
   url: https://a-ramji.github.io/blog/2023-10-23-my-first-post/
 image: dana-sarsenbekova-LF1BskR3GKI-unsplash.jpg
-draft: false # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
+draft: true # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
 ---
 
 # This website is under construction!!!

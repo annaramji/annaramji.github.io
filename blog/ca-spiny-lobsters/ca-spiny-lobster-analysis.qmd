@@ -1,11 +1,15 @@
 ---
 title: "California Spiny Lobsters & Reef Bottom Temperatures"
-format: 
-  html:
-    code-fold: TRUE
-    
 editor: visual
 engine: knitr
+format: 
+  html:
+    code-fold: true
+
+knitr:
+  opts_chunk: 
+    collapse: true    
+
 description: "Statistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites"
 author:
     name: Anna Ramji
@@ -56,7 +60,7 @@ The Santa Barbara Coastal Long Term Ecological Research project (SBC LTER) has m
 
 To answer this, I used Carapace Length as it is the primary size metric for lobsters and is used as a proxy measurement for age. I also used reef bottom temperatures (as apposed to sea surface temperatures (SST). All of this data was collected at reef study sites in the SBC LTER network.
 
-# Background
+## Background
 
 ## California Spiny Lobsters
 
@@ -182,7 +186,7 @@ library(sjPlot)
 
 ```
 
-## Reading in the Data
+# Reading in the Data
 
 Lobster Data:
 
@@ -222,7 +226,7 @@ head(water_data, 2) %>% gt()
 
 ```
 
-### Preliminary plotting, data exploration
+# Preliminary plotting, data exploration
 
 Let's check our data for normality to see what our options are in terms of analysis:
 
@@ -343,7 +347,7 @@ We have a few options here. We could either limit our dataset to just August (`m
 
 Thus, in this analysis, I will make two subsets: one in which we keep all of our data (denoted in our outputs as August data and August & September data), and the other will only include data collected in August. We can compare the results of our statistical analyses as we go.
 
-## Averages
+# Averages
 
 ### Making subsets, taking ~~names~~ means
 
@@ -368,9 +372,9 @@ lobster_august <- lobster_size %>%
             min_size = min(size_mm, na.rm = TRUE))
 ```
 
-:::panel-tabset
+::: {.panel-tabset}
 
-####August & September
+#### August & September
 
 ```{r lobster-avg-plot-all}
 # plot average lobster size per site per year, including September data
@@ -432,7 +436,7 @@ lobster_size_plot_august <- lobster_august %>%  ggplot() +
 lobster_size_plot_august
 
 ```
-
+::: 
 -   The vertical dotted line indicates the first year of the 2015-2016 El Niño
 
 -   The lower dashed horizontal line indicates the average estimated size (and corresponding age) at which the California Spiny Lobster reaches sexual maturity: around 2.5 inches (63.5 mm), or 58mm and 5 years old for Males and 70 mm and roughly 7 years old for Females (California Department of Fish and Wildlife, 2019), (Lindberg 1955, in Engle 1979).
@@ -536,9 +540,9 @@ lobster_temps_all <- inner_join(site_temps,
 
 ```
 
-:::panel-tabset
+::: {.panel-tabset}
 
-####Avg. Temperatures
+#### Avg. Temperatures
 
 ```{r temp-site-plots}
 # plotting august temp trends per site, within our lobster data time range
@@ -570,13 +574,14 @@ august_temp_trends
 
 ```
 
-####Avg. Sizes
+#### Avg. Sizes
 
 ```{r avg-size-plot-temp}
 
 lobster_size_plot_august
 
 ```
+::: 
 
 *The dotted vertical line in each graph once again shows the beginning of the 2015/2016 El Niño. The dashed horizontal lines in the temperature plots show the 20-year average August reef bottom temperature (from 2002-2022). The dashed horizontal lines in the average size plot show the carapace lengths at sexual maturity (lower) and catch size (higher).*
 
