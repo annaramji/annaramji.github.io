@@ -18,12 +18,12 @@ author:
     affiliation: MEDS
     affiliation-url: https://bren.ucsb.edu/about
 
-date: 12-14-2023
+date: 12-15-2023
 categories: [Quarto, MEDS, Stats, R, Portfolio]
 
 #bibliography: references.bib
 citation: 
-  url: https://a-ramji.github.io/blog/2023-12-14-ca-spiny-lobsters/
+  url: https://a-ramji.github.io/blog/2023-12-15-ca-spiny-lobsters/
 image: figs/spiny-lobster-2.jpeg
 draft: true # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
 ---
@@ -32,7 +32,7 @@ draft: true # saves this as a draft, doesn't appear on your blog unless you send
 
 ![](figs/spiny-lobster-2.jpeg){fig-alt="this image shows two california spiny lobsters under a rock"}
 
-Image credits: Charlie Ess for the \[National Fisherman, 2020\](<https://www.nationalfisherman.com/west-coast-pacific/california-spiny-lobster-takes-double-hit-from-china-market>)
+Image credits: Charlie Ess for the [National Fisherman, 2020](<https://www.nationalfisherman.com/west-coast-pacific/california-spiny-lobster-takes-double-hit-from-china-market>)
 
 ## Introduction & Background
 

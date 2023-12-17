@@ -2,10 +2,4 @@
 title: "About"
 ---
 
-<h1> This website is under construction :) </h1>
-
-
-<h1 class="title">this is a title</h1>
-
-
-<p class="title center-text"> this is center-aligned paragraph text</p>
+<h1> This website is under construction </h1>
