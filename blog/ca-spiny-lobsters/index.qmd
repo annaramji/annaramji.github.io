@@ -15,12 +15,12 @@ format:
   html:
     code-fold: true
     toc: true
-#bibliography: references.bib
 citation: 
-  url: https://a-ramji.github.io/blog/2023-12-15-ca-spiny-lobsters/
+  url: https://a-ramji.github.io/blog/2023-12-17-ca-spiny-lobsters/
 #image: figs/spiny-lobster-2.jpeg
 draft: false # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
 # bibliography: references.bib
+#bibliography: references.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -139,11 +139,9 @@ Notes on methods, limitations: "Transects were sampled by two SCUBA divers durin
 
 **Data Citation:**
 
-Reed, D. and R. Miller. (2023). SBC LTER: Reef: Abundance, size and fishing effort for California Spiny Lobster (Panulirus interruptus), ongoing since 2012. \[Data file\]. Environmental Data Initiative. <https://doi.org/10.6073/pasta/3595322687af94cd532620ad9db94c77> (Accessed 2023-11-22).
+Reed, D. & Miller, R. (2023). *SBC LTER: Reef: Abundance, size and fishing effort for California Spiny Lobster (Panulirus interruptus), ongoing since 2012 ver 9*. \[Data File\]. Environmental Data Initiative. <https://doi.org/10.6073/pasta/3595322687af94cd532620ad9db94c77> (Accessed 2023-11-22).
 
-**Figure Citation**:
-
-Carter, M. L., Flick, R. E., Terrill, E., Beckhaus, E. C., Martin, K., Fey, C. L., Walker, P. W., Largier, J. L., & McGowan, J. A. (2022). *Shore Stations Program Data Archive: Current and historical coastal ocean temperature and salinity measurements from California stations*. UC San Diego Library Digital Collections. <https://doi.org/10.6075/J0S75GHD> (Accessed 2023-12-12)
+**Figure Citation**: Carter et. al., 2022.
 
 ### Dataset 2: SBC LTER: Reef: Bottom temperature data
 
@@ -212,7 +210,7 @@ lobster_size <- lobster_data %>%
   # filtering out NA values for size_mm 
   drop_na(size_mm)
   
-head(lobster_size, 2) %>% gt()
+# head(lobster_size, 2) %>% gt()
 
 ```
 
@@ -230,11 +228,11 @@ water_data <- water_data %>%
   select(year, month, date, site, temp_c)
   
   
-head(water_data, 2) %>% gt()
+# head(water_data, 2) %>% gt()
 
 ```
 
-Based on these preliminary outputs, we can see that the primary variables (columns) we'll be working with are related to the date, site, and measurement variable (`size_mm` and `temp_c`). I also found it interesting that the first row in the temperature dataset has a starting date of August, 2002, when the data repository claims that the temperature data ranges back to 2000.
+Omitted for brevity, the preliminary outputs show that the primary variables (columns) we'll be working with are related to the date, site, and measurement variable (`size_mm` and `temp_c`). I also found it interesting that the first row in the temperature dataset has a starting date of August, 2002, when the data repository claims that the temperature data ranges back to 2000.
 
 ## Preliminary plotting, data exploration
 
@@ -616,13 +614,10 @@ Comparing our average temperature and average size plots side by side, there see
 
 ## Lobster size & reef temperature relationship
 
-In this section, we will:
+In this section, we will:\
 
 -   look at the general relationship between our size and temperature variables (plot)
 
-```{=html}
-<!-- -->
-```
 -   run multiple linear regression (`size ~ temp + site`)
 
 -   run multiple regression with an interaction term (`size ~ temp + site + temp:site`)
