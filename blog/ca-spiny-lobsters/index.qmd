@@ -700,7 +700,7 @@ sjPlot::tab_model(lobster_temp_reg_august, lobster_temp_reg,
 
 **Interpretation of coefficients in August-only Regression:**
 
--   **Intercept:** at the Arroyo Quemado Reef (AQUE) study site (our reference group), when the reef bottom temperature is 0 º Celsius, the expected lobster carapace size is `r paste(round(lobster_temp_reg_august$coefficients["(Intercept)"], 2))` mm (nonsensical, from the SBC LTER records of reef bottom temperatures, which have been recorded every 15 minutes, ongoing since 2002, the minimum recorded temperature of all time in our data set is `r(min(water_data$temp_c))` º Celsius).
+-   **Intercept:** at the Arroyo Quemado Reef (AQUE) study site (our reference group), when the reef bottom temperature is 0º Celsius, the expected lobster carapace size is `r paste(round(lobster_temp_reg_august$coefficients["(Intercept)"], 2))` mm (nonsensical, from the SBC LTER records of reef bottom temperatures, which have been recorded every 15 minutes, ongoing since 2002, the minimum recorded temperature of all time in our data set is `r(min(water_data$temp_c))` º Celsius).
 -   **Slope: `avg_temp`:** Holding `site` constant (comparing average lobster carapace lengths and average water temperatures only to those of the same SBC LTER study site), at the AQUE study site, given a one unit change in average reef bottom temperature (an increase of 1º Celsius) as measured in August, we expect the average carapace length of lobsters to change by `r paste(round(lobster_temp_reg_august$coefficients['avg_temp'], 2))` mm.
 
 **Interpretation of `site` coefficients:**
@@ -736,9 +736,9 @@ As temperatures vary in each site, we can add an interaction term to our model t
 $$\mu CL_i =\beta_{0} + \beta_{1} \mu Temp_i +\beta_{2} \text Site + \beta_{3} (\mu Temp_{i} * \text Site) +  \varepsilon_i$$ Where:
 
 -   $\mu CL$ is the average carapace length, in millimeters, in August
--   $\beta_{0}$ is the intercept, or expected average carapace length, in millimeters, when the average August temperature is 0ºC and site is held constant (for our reference site, AQUE)
--   $\beta_{1}$ is the slope or expected change in average carapace length given a 1 unit change in average temperature (1ºC) in August, when site is held constant (for our reference site, AQUE)
--   $\beta_{2}$ is the difference in slope or expected change in average carapace length given a 1 unit change in average temperature (1ºC) in August between our reference group (site AQUE) and each other site.
+-   $\beta_{0}$ is the intercept, or expected average carapace length, in millimeters, when the average August temperature is 0º C and site is held constant (for our reference site, AQUE)
+-   $\beta_{1}$ is the slope or expected change in average carapace length given a 1 unit change in average temperature (1º C) in August, when site is held constant (for our reference site, AQUE)
+-   $\beta_{2}$ is the difference in slope or expected change in average carapace length given a 1 unit change in average temperature (1º C) in August between our reference group (site AQUE) and each other site.
 -   $\beta_{3}$ is the difference in slopes between our different sites, where slope is the average change in carapace length in August given a 1º C change in average reef bottom temperature in August for each site
 -   $\varepsilon$ is our error term, containing everything else that impacts average expected carapace length as measured in August.
 

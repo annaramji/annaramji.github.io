@@ -976,7 +976,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 class="anchored" data-anchor-id="regression-interpretation"><strong>Regression Interpretation:</strong></h4>
 <p><strong>Interpretation of coefficients in August-only Regression:</strong></p>
 <ul>
-<li><strong>Intercept:</strong> at the Arroyo Quemado Reef (AQUE) study site (our reference group), when the reef bottom temperature is 0 º Celsius, the expected lobster carapace size is 93.91 mm (nonsensical, from the SBC LTER records of reef bottom temperatures, which have been recorded every 15 minutes, ongoing since 2002, the minimum recorded temperature of all time in our data set is <code>r(min(water_data$temp_c))</code> º Celsius).</li>
+<li><strong>Intercept:</strong> at the Arroyo Quemado Reef (AQUE) study site (our reference group), when the reef bottom temperature is 0º Celsius, the expected lobster carapace size is 93.91 mm (nonsensical, from the SBC LTER records of reef bottom temperatures, which have been recorded every 15 minutes, ongoing since 2002, the minimum recorded temperature of all time in our data set is <code>r(min(water_data$temp_c))</code> º Celsius).</li>
 <li><strong>Slope: <code>avg_temp</code>:</strong> Holding <code>site</code> constant (comparing average lobster carapace lengths and average water temperatures only to those of the same SBC LTER study site), at the AQUE study site, given a one unit change in average reef bottom temperature (an increase of 1º Celsius) as measured in August, we expect the average carapace length of lobsters to change by -1.16 mm.</li>
 </ul>
 <p><strong>Interpretation of <code>site</code> coefficients:</strong></p>
@@ -1005,9 +1005,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span class="math display">\[\mu CL_i =\beta_{0} + \beta_{1} \mu Temp_i +\beta_{2} \text Site + \beta_{3} (\mu Temp_{i} * \text Site) +  \varepsilon_i\]</span> Where:</p>
 <ul>
 <li><span class="math inline">\(\mu CL\)</span> is the average carapace length, in millimeters, in August</li>
-<li><span class="math inline">\(\beta_{0}\)</span> is the intercept, or expected average carapace length, in millimeters, when the average August temperature is 0ºC and site is held constant (for our reference site, AQUE)</li>
-<li><span class="math inline">\(\beta_{1}\)</span> is the slope or expected change in average carapace length given a 1 unit change in average temperature (1ºC) in August, when site is held constant (for our reference site, AQUE)</li>
-<li><span class="math inline">\(\beta_{2}\)</span> is the difference in slope or expected change in average carapace length given a 1 unit change in average temperature (1ºC) in August between our reference group (site AQUE) and each other site.</li>
+<li><span class="math inline">\(\beta_{0}\)</span> is the intercept, or expected average carapace length, in millimeters, when the average August temperature is 0º C and site is held constant (for our reference site, AQUE)</li>
+<li><span class="math inline">\(\beta_{1}\)</span> is the slope or expected change in average carapace length given a 1 unit change in average temperature (1º C) in August, when site is held constant (for our reference site, AQUE)</li>
+<li><span class="math inline">\(\beta_{2}\)</span> is the difference in slope or expected change in average carapace length given a 1 unit change in average temperature (1º C) in August between our reference group (site AQUE) and each other site.</li>
 <li><span class="math inline">\(\beta_{3}\)</span> is the difference in slopes between our different sites, where slope is the average change in carapace length in August given a 1º C change in average reef bottom temperature in August for each site</li>
 <li><span class="math inline">\(\varepsilon\)</span> is our error term, containing everything else that impacts average expected carapace length as measured in August.</li>
 </ul>
