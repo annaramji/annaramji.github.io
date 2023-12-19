@@ -72,7 +72,7 @@ The species is currently listed as a species of "least concern" on the IUCN Redl
 
 [^10]: California Department of Fish and Wildlife. (2019). California Spiny Lobster, *Panulirus interruptus*, Enhanced Status Report.
 
-Do you think kelp forests are cool? Well, these lobsters are also a keystone species in California's kelp forest ecosystems. They're a key predator of purple sea urchins, which love to eat the kelp that the rest of the ecosystem depends on. Spiny lobsters relieve this predation (urchin grazing) on Giant Kelp forests and as many larger fish prey on these lobsters, they are a key, mid-trophic level species[^11]. They typically forage at night, and according to the CADFW's Marine Species Portal, "Spiny lobster provides an important role in the ecology of rocky reefs, and it is associated with critical habitats such as surfgrass beds." [^12]
+Do you think kelp forests are cool? Well, these lobsters are also a keystone species in California's kelp forest ecosystems. They're a key predator of purple sea urchins, which love to eat the Giant Kelp that the rest of the ecosystem depends on. Spiny lobsters relieve this predation (urchin grazing) on Giant Kelp forests and as many larger fish prey on these lobsters, they are a key, mid-trophic level species[^11]. They typically forage at night, and according to the CADFW's Marine Species Portal, "the Spiny lobster provides an important role in the ecology of rocky reefs, and it is associated with critical habitats such as surfgrass beds." [^12]
 
 [^11]: California Department of Fish and Wildlife. (2019). California Spiny Lobster, *Panulirus interruptus*, Enhanced Status Report.
 
@@ -82,7 +82,7 @@ The Santa Barbara Coast and the Channel Islands National Park are key areas of t
 
 ![](figs/ca-spiny-lobster-habitat.jpg){width="407"}
 
-The presence of eelgrass or surfgrass in the rocky reefs in these areas provide critical habitat for the 11 larval stages of Spiny lobsters.
+The presence of eelgrass or surfgrass in the rocky reefs in these areas also provide critical habitat for the 11 larval stages of Spiny lobsters.
 
 *Panulirus interruptus* are estimated to reach sexual maturity at around 5-7 years old (Females typically take longer to mature) which is estimated by a carapace length of 2.5 inches, or 63.5 millimeters [^13]. The CA Department of Fish & Wildlife manages the Spiny Lobster populations in part by restricting the months during which it is legal to hunt/fish for them. The fishing season is from early October to mid-March, which allows populations to recover in the off-season, as this species has a complex reproductive cycle and needs to molt (shed their exoskeleton) which makes them especially vulnerable to predation. The legal catch size is 3.25 inches, or 82.55 millimeters [^14]. Overall, it seems that the populations are able to remain stable thanks to the careful management of the CADFW.
 
@@ -107,15 +107,15 @@ To investigate the relationship between CA Spiny Lobsters populations and reef b
 The five SBC LTER Reef sites that I'll be using data from in this analysis are:
 
 -   Arroyo Quemado Reef: site code "`AQUE`"
-    -   Arroyo Quemado Reef depth range from 5.4 m to 10.7 m. Reference on Land is close to US101/Arroyo Quemado Ln.
+    -   depth range: 5.4 meters to 10.7 meters
 -   Naples Reef: site code "`NAPL`"
-    -   Naples Reef is located on the Santa Barbara Channel near the community of Naples and Dos Pueblos Canyon, Santa Barbara County, CA. Depth ranges from -5.9 to -13.4 meters.
+    -   depth range: 5.9 m to 13.4 m
 -   Isla Vista Reef: site code "`IVEE`":
-    -   Isla Vista (IV) Reef is located on the Santa Barbara Channel near the University of California Santa Barbara, CA. Depth range is from -8.2 to -8.8 meters.
+    -   depth range: 8.2 m to 8.8 m
 -   Mohawk Reef: site code "`MOHK`":
-    -   Mohawk Reef: Mohawk Reef depth ranges from 4.5m to 6.0 m. Reference on land is Mohawk Rd / Edgewater Way.
+    -   depth range: 4.5 m to 6.0 m
 -   Carpinteria Reef: site code "`CARP`":
-    -   Carpinteria Reef is located on the Santa Barbara Channel offshore of the Carpinteria Salt Marsh. Depth range is from -2.2 to -8.8 meters
+    -   depth range: -2.2 m to -8.8 m
 
 I've labeled these on a screenshot of a geographically contextual rendered map preview from the [SBC LTER wesite](https://sbclter.msi.ucsb.edu/data/catalog/package/?package=knb-lter-sbc.77):
 
@@ -355,9 +355,7 @@ Due to the nature of lobster carapace size increasing over time (positive age-si
 
 Another issue that comes up with excluding 2014 data for the AQUE study site is that in all other sites, the average carapace size (mm) was greater in 2014 than in 2013. This could mean that by excluding 2014 data for the AQUE study site, in our attempt to avoid a falsely high baseline/comparison point, we are obtaining a falsely low one. If we include both months of 2014 data, the IVEE study site is also skewed to have higher average carapace sizes for that year, as I'll show later.
 
-We have a few options here. We could either limit our dataset to just August (`month == 8`) to get a more even and fairly comparable set of averages across sites in our data, or include the September data and continue on with our analysis, keeping this discrepancy in mind. Another option is to make two subsets, one of just August data, and another of all of our data, and run our regression and analyses on both separately. We could also make an estimate of what we'd expect the average carapace length to be in August, 2014 for site AQUE and not include the September data for AQUE or IVEE. Another option would be to omit site AQUE from our analysis, and exclude the September data from site IVEE.
-
-Thus, in this analysis, I will make two subsets: one in which we keep all of our data (denoted in our outputs as August data and August & September data), and the other will only include data collected in August. We can compare the results of our statistical analyses as we go.
+To address this discrepancy in the data, In my analysis, I will make two subsets: one in which we keep all of our data (denoted in our outputs as August data and August & September data), and the other will only include data collected in August. We can compare the results of our statistical analyses as we go.
 
 ## Averages
 
@@ -465,7 +463,7 @@ lobster_size_plot_august
 
 -   Note the significant difference in slopes between year 2014 and 2015 data points for average carapace size (mm) at the AQUE study site between the September-inclusive and September-exclusive (August only) plots. There is also a subtle change at the IVEE study site between 2014 and 2015 between the two plots as well, supporting what we know about how carapace lengths increase over time, even on a monthly level.
 
-Taking the average size (carapace length) per site per year showed potentially interesting trends. At all sites, there is a notable drop in average carapace length (mm) from 2014 to 2015, both including and excluding September 2014 data. This significant change in slope of the lines connecting data points for average carapace length coincides with the 2015/2016 El Niño, which was the strongest over a 145 year record [^21]. During El Niño events, sea surface temperatures (SST) rise, and SST estimates can also serve as an indicator for coastal ocean temperature levels -- if SST is rising, the temperatures at the bottom of relatively shallow, coastal reef sites are likely rising as well. In some cases, depending on the thermocline (inverted or not) that a reef experiences, Sea Bottom Temperatures (SBT) can even be higher than SST [^22].
+Taking the average size (carapace length) per site per year shows potentially interesting trends. At all sites, there is a notable drop in average carapace length (mm) from 2014 to 2015, both including and excluding September 2014 data. This significant change in slope of the lines connecting data points for average carapace length coincides with the 2015/2016 El Niño, which was the strongest over a 145 year record [^21]. During El Niño events, sea surface temperatures (SST) rise, and SST estimates can also serve as an indicator for coastal ocean temperature levels -- if SST is rising, the temperatures at the bottom of relatively shallow, coastal reef sites are likely rising as well. In some cases, depending on the thermocline (inverted or not) that a reef experiences, Sea Bottom Temperatures (SBT) can even be higher than SST [^22].
 
 [^21]: Barnard, P. L., Hoover, D., Hubbard, D. M., Snyder, A., Ludka, B. C., Allan, J., Kaminsky, G. M., Ruggiero, P., Gallien, T. W., Gabel, L., McCandless, D., Weiner, H. M., Cohn, N., Anderson, D. L., & Serafin, K. A. (2017). Extreme oceanographic forcing and coastal response due to the 2015--2016 El Niño. *Nature Communications*, *8*(1), Article 1. <https://doi.org/10.1038/ncomms14365>
 
@@ -691,15 +689,11 @@ lobster_temp_reg <- lm(formula = avg_size ~ avg_temp + site, data = lobster_temp
 
 # use sjPlot to show a comparison of the outputs from running these models
 
-
 sjPlot::tab_model(lobster_temp_reg_august, lobster_temp_reg,
                   #  title = "Multiple Regression: formula = average  ~ avg_temp + site",
                   dv.labels = c("August", "August & September"),
                   digits = 3
 )
-
-
-
 ```
 
 #### **Regression Interpretation:**
@@ -719,7 +713,7 @@ Note, the coefficients following `avg temp` are to be interpreted in relation to
 
 -   `siteIVEE`: For the SBC LTER Isla Vista Reef study site, given a 1º Celsius increase (in average reef bottom temperature in August), we expect to see a change in average lobster carapace length of `r paste(round(lobster_temp_reg_august$coefficients['siteIVEE'] + lobster_temp_reg_august$coefficients['avg_temp'], 2))` mm.
 -   `siteMOHK`: For the SBC LTER Mohawk Reef study site, given a 1º Celsius increase in average reef bottom temperature in August, we expect to see a change in average lobster carapace length of `r paste(round(lobster_temp_reg_august$coefficients['siteMOHK'] + lobster_temp_reg_august$coefficients['avg_temp'], 2))` mm.
--   `siteNAPL`: For the SBC LTER Naples Reef study site, given a 1º Celsius increase in average reef bottom temperature in August, we expect to see a change in average lobster carapace length of `r paste(round(lobster_temp_reg_august$coefficients['siteNAPL'] + lobster_temp_reg_august$coefficients['avg_temp'], 2))` mm. This positive value is perhaps a sign that something more complicated is going on at this site, or perhaps in general.
+-   `siteNAPL`: For the SBC LTER Naples Reef study site, given a 1º Celsius increase in average reef bottom temperature in August, we expect to see a change in average lobster carapace length of `r paste(round(lobster_temp_reg_august$coefficients['siteNAPL'] + lobster_temp_reg_august$coefficients['avg_temp'], 2))` mm. This positive value is perhaps a sign that something more complicated is going on at this site, or perhaps in general. It also doesn't seem to align with the visual evidence in our average temperature- and average CL-by-site plot earlier: following the temperature spike in 2015, the sample average carapace length fell, and after average temperatures began to decrease significantly following the 2018 temperature spike, the NAPL site showed a steadily, significantly increasing sample average carapace length.
 
 $R^2$:
 
@@ -837,13 +831,13 @@ I particularly expected to see a new, *negative* estimate for the Naples reef si
 
 *Because these are simple linear models, we can use the* $R^2$ values in our interpretation of the results, rather than the adjusted $R^2$ values.
 
--   The highest $R^2$ value was at the Arroyo Quemado reef site, with a value of 0.44, meaning that around 44% of the variation in our data at the AQUE site can be explained by our model, or 44% of the variation in average lobster carapace size in August can be explained by the average reef bottom temperature. With both the intercept (nonsensical) and average temperature coefficient being statistically significant results under an $\alpha$ level of 0.05, this is an exciting result.
+-   The highest $R^2$ value was at the Arroyo Quemado reef site, with a value of 0.44, meaning that around 44% of the variation in our data at the AQUE site can be explained by our model, or 44% of the variation in average lobster carapace size in August can be explained by the average reef bottom temperature in August. With both the intercept (nonsensical) and average temperature coefficient being statistically significant results under an $\alpha$ level of 0.05, this is an exciting result.
 
 That's pretty much where the statistically significant "good news" ends, though classifying this as "good" or "bad" is wrong and limits our ability to learn from these results :)
 
 -   The next-highest $R^2$ value is from our Naples Reef regression, and it tells us that roughly 16% of the variation in our Naples Reef data can be explained by our model. I explained the significance of the estimates earlier, and they ultimately lead me to think that there is a lot more going on at the Naples site that is impacting average lobster size than just average reef bottom temperature.
 
--   The third-highest $R^2$ value is from the Mohawk Reef regression output and suggests that around 13% of the variation in the Mohawk Reef data can be explained by our model (change in average reef bottom temperatures in August). The nonsensical intercept of 90 has a high siginficance level, and the estimate for the average temperature coefficient is roughly -1.1, which means that for a 1 unit change in average reef bottom temperature in August, average lobster carapace size in August at the Mohawk Reef site is expected to decrease by around 1.1 mm. This estimate has a p-value of 0.3, which is not statistically significant under our $\alpha$ level of 0.05.
+-   The third-highest $R^2$ value is from the Mohawk Reef regression output and suggests that around 13% of the variation in the Mohawk Reef data can be explained by our model (change in average reef bottom temperatures in August). The nonsensical intercept of 90 has a high significance level, and the estimate for the average temperature coefficient is roughly -1.1, which means that for a 1 unit change in average reef bottom temperature in August, average lobster carapace size in August at the Mohawk Reef site is expected to decrease by around 1.1 mm. This estimate has a p-value of 0.3, which is not statistically significant under our $\alpha$ level of 0.05.
 
 The other two sites -- Carpinteria Reef and Isla Vista Reef -- have high p-values for their coefficient estimates and very low $R^2$ values, with just under 1.5% of the variation in the data able to be explained by the models.
 
