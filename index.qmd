@@ -12,7 +12,7 @@ about:
       icon: linkedin.svg
     - text: GitHub
       icon: github
-      href: https://github.com/a-ramji
+      href: https://github.com/annaramji
     - text: Email
       icon: envelope
       href: mailto::aramji@ucsb.edu
@@ -26,10 +26,11 @@ Anna Ramji grew up hiking and fishing along the Eastern Sierra Nevada mountain r
 
 ## Education:
 
+Master of Environmental Data Science, University of California, Santa Barbara (2024)
+
 B.S. Environmental Sciences, University of California, Berkeley (2021)
 
-Master of Environmental Data Science, University of California, Santa Barbara (2024)
 
 ### Theme:
 
-- custom built by Anna Ramji (2023), work in progress :) 
+- custom built by Anna Ramji (2024), (work in progress!) 

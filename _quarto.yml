@@ -3,28 +3,28 @@ project:
   output-dir: docs
 
 website:
-  title: "a-ramji.github.io"
+  title: "Anna Ramji"
   navbar:
     left:
       - href: index.qmd
         text: Home
       - about.qmd
       - href: blog.qmd
-        text: Blog
-      - href: resources.qmd
-        text: Resources
+        text: Projects + Blog
+ #     - href: resources.qmd
+ #       text: Resources
   page-footer:
 #  background: light
-    left: "Copyright 2023, Anna Ramji"
+    left: "Copyright 2024, Anna Ramji"
     right:
      - icon: github
-       href: https://github.com/a-ramji
+       href: https://github.com/annaramji
 
 format:
   html:
     theme: 
       - styles.scss
-   #   - minty
+    #  - minty
     # - dark: solar
   #  css: styles.css
     mainfont: Nunito

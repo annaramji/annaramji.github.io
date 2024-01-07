@@ -31,12 +31,12 @@ $chap5: #2F3525;
 // base document Colors
 
 $navbar-bg: $another-sage-green; // navbar
-$navbar-fg: $white; // navbar foreground elements
+$navbar-fg: $cream; // navbar foreground elements
 $navbar-hl: $garden; // highlight color when hovering over navbar links
-$body-bg: $cream; // page background 
+$body-bg: $white; // page background 
 $body-color: $darkgray; // page text 
 $footer-bg: $rich-green; // footer 
-$link-color: $darkblue; // hyperlinks 
+$link-color: $teal; // hyperlinks 
 
 // Inline code
 $code-bg: $cream; // inline code background color
@@ -59,12 +59,13 @@ h1 {
 h2 {
   letter-spacing: 2px;
   font-weight: 500;
-  color: $grey-foam;
+  color: $sage-green;
 }
 
 
 h3 {
   font-weight: 400;
+  color: $dark-green;
  // font-size: 35px;
 }
 
