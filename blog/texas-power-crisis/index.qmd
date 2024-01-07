@@ -3,7 +3,7 @@ title: "2021 Texas Power Crisis: Blackout Impact Analysis"
 description: "Analyzing VIIRS Night Lights data and U.S. Census data for assessing impact on Houston metropolitan area"
 author:
   - name: Anna Ramji
-    url: https://a-ramji.github.io/
+    url: https://annaramji.github.io/
     orcid: https://orcid.org/0009-0006-7576-7793
     affiliation: MEDS
     affiliation-url: https://bren.ucsb.edu/about
@@ -11,7 +11,7 @@ date: 12-17-2023
 categories: [Quarto, MEDS, Geospatial, R, tmap, ggplot2]
 #bibliography: references.bib
 citation: 
-  url: https://a-ramji.github.io/blog/2023-12-17-texas-power-crisis/
+  url: https://annaramji.github.io/blog/2023-12-17-texas-power-crisis/
 # image: ~/dev/github/personal/a-ramji.github.io/blog/texas-power-crisis/images/texas-blackout-Medium.jpg
 format: 
   html:
@@ -40,7 +40,7 @@ You can also read the University of Texas at Austin, Energy Institute's [report]
 
 This blog post is a summary of my geospatial data and remote sensing project on the 2021 Texas Power Crisis, specifically looking at the blackouts in the Houston metropolitan area on February 16th, 2021 (during the second of three intense winter storms, also referred to as the week of the Winter Storm Uri).
 
-In the primary analysis notebook, which you can find on my [GitHub repository](https://github.com/a-ramji/houston-blackouts-nightlights-analysis) I use VIIRS night lights data, OpenStreetMap data, and US Census Bureau data to:
+In the primary analysis notebook, which you can find on my [GitHub repository](https://github.com/annaramji/houston-blackouts-nightlights-analysis) I use VIIRS night lights data, OpenStreetMap data, and US Census Bureau data to:
 
 -   estimate the number of homes in Houston that lost power as a result of the first two storms
 -   investigate if socioeconomic factors are predictors of communities recovery from a power outage\
