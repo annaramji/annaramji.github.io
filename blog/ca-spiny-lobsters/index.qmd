@@ -3,7 +3,7 @@ title: "California Spiny Lobsters & Reef Bottom Temperatures"
 description: "Statistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites"
 author:
     name: Anna Ramji
-    url: https://a-ramji.github.io/
+    url: https://annaramji.github.io/
     orcid: https://orcid.org/0009-0006-7576-7793
     affiliation: MEDS
     affiliation-url: https://bren.ucsb.edu/about
@@ -16,7 +16,7 @@ format:
     code-fold: true
     toc: true
 citation: 
-  url: https://a-ramji.github.io/blog/2023-12-17-ca-spiny-lobsters/
+  url: https://annaramji.github.io/blog/2023-12-17-ca-spiny-lobsters/
 #image: figs/spiny-lobster-2.jpeg
 draft: false # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
 # bibliography: references.bib
@@ -368,7 +368,7 @@ First, we'll make two subsets (August vs. August & September) and then we'll plo
 
 # keeping data from August and September
 lobster_all <- lobster_size %>% 
-  group_by(year, month, site) %>% 
+  group_by(year, site) %>% 
   summarize(avg_size = mean(size_mm, na.rm = TRUE),
             max_size = max(size_mm, na.rm = TRUE), 
             min_size = min(size_mm, na.rm = TRUE))
