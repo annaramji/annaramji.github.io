@@ -1,0 +1,24 @@
+---
+title: "California Spiny Lobsters & Reef Bottom Temperatures"
+description: "Statistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites"
+author:
+    name: Anna Ramji
+    url: https://annaramji.github.io/
+    orcid: https://orcid.org/0009-0006-7576-7793
+    affiliation: MEDS
+    affiliation-url: https://bren.ucsb.edu/about
+date: 3-9-2024
+categories: [Quarto, MEDS, Stats, R, Portfolio, Data Viz]
+editor: visual
+engine: knitr
+format: 
+  html:
+    code-fold: true
+    toc: true
+citation: 
+  url: https://annaramji.github.io/blog/2024-3-9-agrifood-emissions-viz/
+#image: figs/spiny-lobster-2.jpeg
+draft: true # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
+---
+
+
