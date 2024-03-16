@@ -17,7 +17,6 @@ format:
     toc: true
 citation: 
   url: https://annaramji.github.io/blog/2024-03-09-agrifood-emissions-viz/
-#image: figs/spiny-lobster-2.jpeg
 draft: false # saves this as a draft, doesn't appear on your blog unless you send someone a direct link
 ---
 
@@ -101,7 +100,7 @@ I created my three visualizations (one map and two `patchwork`-quilted plots, fo
 
 I used colors to emphasize and consistently tie different aspects of the visualization, including a dark blue for every time I mention USA and red for China. While I'll discuss my design decisions for each plot more in-depth below, I decided to choose these colors based on the flags of each country, and also used Coolors to visualize the compatibility of the different potential shades of red and blue. For some of the text, the shade of blue that I chose for my plots appeared to be too similar to black, so in order to emphasize the country name enough (the base text is black, and the red text I associated with "China" stood out starkly), I ended up using a slightly lighter blue. I also added the country flags to further emphasize the association between the colors and countries and to provide more obvious context for my infographic.
 
-Choosing illustrated, cartoon-esque icons helps make the visualization more "fun" and interesting, lowering the stakes of interacting and engaging with the infographic and thus increasing accessibility.
+Choosing illustrated, cartoon-esque icons helps make the visualization more "fun" and interesting, lowering the stakes of interacting and engaging with the infographic and thus increasing accessibility. I added the context of how many miles it would take to drive enough to emit 1 kiloton of CO~2~ to more easily connect and contextualize my data. I included icons that I felt were representative of San Francisco (Golden Gate Bridge) and New York (State of Liberty) to make this more tangible. As with all text elements in my infographic, I utilized bold fonts and colors to emphasize important takeaways and thematic connections to each country.
 
 Using Playfair Display for my infographic and plot title typeface increases legibility as it is a serif typeface and has many font options (from Regular to Black). Pairing this with Raleway as my infographic body text, plot subtitle, axis, legend, and caption text typeface provides a complimentary and extra-legible sans-serif typeface with an even wider range of font options (from Thin to Black).
 
@@ -268,7 +267,9 @@ usa_china_dumb <- usa_china_subset |>
 
 ## Total Emissions and Per Capita Emissions Over Time
 
-I first created a total emissions plot, comparing the yearly total agri-food CO~2~ emissions of USA and mainland China from 1990-2020 (the full year range of my dataset), using the `total_population` column I created in my data wrangling steps above.
+To answer my first two sub-questions *(How have total agri-food CO~2~ emissions changed over time in USA vs. China? How have agri-food CO~2~ emissions per capita changed over time in USA vs. China?)* I created a combined plot showing both total and per capita agri-food CO~2~ emissions over time in USA and China.
+
+I first created a total emissions plot, comparing the yearly total agri-food CO~2~ emissions of USA and mainland China from 1990-2020 (the full year range of my dataset), using the `total_population` column I created in my data wrangling steps above. Several portions of the following code are commented out, as I removed certain design elements for the combined `patchwork` plot (caption, titles, etc.) that would be redundant or that I wanted to specify after combining my plots.
 
 ```{r viz-1}
 # I'm using the glue package and html formatting to get the subscripts for CO2 in my title and y-axis labels here
@@ -402,7 +403,7 @@ theme(
 
 ```
 
-I then created a similar plot comparing emissions per capita, which I calculated using the `total_emissions` column and the `total_population` column I created earlier to make an `emissions_per_capita` column.
+To answer my second subquestion, "*How have agri-food CO~2~ emissions per capita changed over time in USA vs. China?"* I created a similar plot comparing emissions per capita, which I calculated using the `total_emissions` column and the `total_population` column I created earlier to make an `emissions_per_capita` column. I also commented out certain design elements that would be redundant once I made the `patchwork` plot, but didn't fully delete them so that I could still render the individual components of the combined plot if I ever wanted to go back and show them separately.
 
 ```{r viz-2}
 
@@ -529,7 +530,7 @@ theme(
 # usa_china_per_cap_plot
 ```
 
-I then combined these plots using patchwork to get this visualization:
+I then combined these plots using `patchwork` , specifying an overall title, subtitle, and caption using `plot_annotation` to get this visualization:
 
 ```{r}
 # combining plots using patchwork
@@ -582,7 +583,7 @@ I chose line plots for this visualization because I felt that it most efficientl
 
 As discussed earlier, I chose to use Playfair Display as the typeface for my title, sub-plot titles, and axis titles to provide a bold, serif font for emphasis. I paired this with Raleway for my subtitle, axis text, and caption to have a more legible, clean look for the finer-detailed textual information. I kept my x-axis labels to a decade interval to avoid over-crowding and complicating my plot.
 
-I chose to remove most axis gridlines to have a very clean look to emphasize the trends of the lines over time. I included faint y-axis gridlines for easier visual reference to the carbon dioxide levels associated with each line or level. I increased the margins between the title and subtitle and plots, as well as between the individual plots' subtitles and axes titles to make them more legible.
+I chose to remove most axis gridlines to have a very clean look to emphasize the trends of the lines over time. I included faint y-axis gridlines for easier visual reference to the carbon dioxide levels associated with each line or level. I increased the margins between the title and subtitle and plots, as well as between the individual plots' subtitles and axes titles to make them more legible. I also increased the margins between the title, subtitle, and caption of the combined plot to maximize readability while placing each element with intention.
 
 I chose the specific shades of red and blue for China and USA based on each country's flag using a color-picker/eyedropper tool. I then pre-visualized these colors in Coolors to see if I liked how they paired together. I kept all of my text black to maximize contrast between text elements and the white background.
 
@@ -596,7 +597,7 @@ I made sure to avoid colors that are not colorblind-friendly, and paired the bol
 
 I wanted to make sure that I wasn't showing favoritism or any moral judgments about either country by making one a more positive color than the other. I also wanted both countries to feel appropriately represented, which is why I chose their associated colors from the colors of their flags.
 
-I figured it was unlikely that a general audience has the domain knowledge to know what 1 kiloton is, which is why I provided a caption and additional reference points in my infographic.
+I figured it was unlikely that a general audience has the domain knowledge to know what 1 kiloton is, which is why I provided a caption and additional reference points in my infographic. I indicated this with a car icon and detailed what an equivalent driving distance in miles would be to emit 1 kiloton of CO~2~ on the infographic in the lower margin below this plot.
 
 # Visualization 3: Lollipop plot
 
