@@ -228,7 +228,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#design-choice-breakdown-1" id="toc-design-choice-breakdown-1" class="nav-link" data-scroll-target="#design-choice-breakdown-1">Design choice breakdown</a></li>
   </ul></li>
   <li><a href="#visualization-4-map" id="toc-visualization-4-map" class="nav-link" data-scroll-target="#visualization-4-map">Visualization 4: Map</a></li>
-  <li><a href="#extra-visualization-4-trends-in-food-sector-emissions-over-time" id="toc-extra-visualization-4-trends-in-food-sector-emissions-over-time" class="nav-link" data-scroll-target="#extra-visualization-4-trends-in-food-sector-emissions-over-time">Extra: Visualization 4: Trends in Food sector emissions over time</a></li>
+  <li><a href="#extra-visualization-5-trends-in-food-sector-emissions-over-time" id="toc-extra-visualization-5-trends-in-food-sector-emissions-over-time" class="nav-link" data-scroll-target="#extra-visualization-5-trends-in-food-sector-emissions-over-time">Extra: Visualization 5: Trends in Food sector emissions over time</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
   <ul class="collapse">
   <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a></li>
@@ -799,13 +799,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="co"># </span><span class="re">END</span><span class="co"> PLOT ANNOTATION</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><img src="figs/tot-per-cap-line-plot-eds240-hw4.png" class="img-fluid"></p>
+<p><img src="figs/tot-per-cap-line-plot-eds240-hw4.png" class="img-fluid" alt="This plot shows two line plots: the top plot shows the trend in total agri-food carbon dioxide emissions per year from 1990 to 2020 in USA and mainland China, measured in million kilotons. China is depicted as a solid red line, and USA as a dashed dark blue line. The bottom plot shows the trend in per-capita agri-food carbon dioxide emissions in the same time scale, measured in kilotons. Overall, China shows a strong, positive trend in total emissions over time, with notable rapid growth beginning around the year 2000 and a slight decrease at around 2011 before continuing upwards, reaching 3 million kilotons of CO2 emissions in 2020. USA has a less extremely positive trend, with a notable spike in per capita emissions around 2016."></p>
+<p>Alt-text: This plot shows two line plots: the top plot shows the trend in total agri-food carbon dioxide emissions per year from 1990 to 2020 in USA and mainland China, measured in million kilotons. China is depicted as a solid red line, and USA as a dashed dark blue line. The bottom plot shows the trend in per-capita agri-food carbon dioxide emissions in the same time scale, measured in kilotons. Overall, China shows a strong, positive trend in total emissions over time, with notable rapid growth beginning around the year 2000 and a slight decrease at around 2011 before continuing upwards, reaching 3 million kilotons of CO2 emissions in 2020. USA has a less extremely positive trend, with a notable spike in per capita emissions around 2016.</p>
 <section id="design-choice-breakdown" class="level3">
 <h3 class="anchored" data-anchor-id="design-choice-breakdown">Design choice breakdown</h3>
 <p>I chose line plots for this visualization because I felt that it most efficiently conveyed the information that I was trying to present. Showing trends over time between the two countries in a line plot just made the most sense.</p>
 <p>As discussed earlier, I chose to use Playfair Display as the typeface for my title, sub-plot titles, and axis titles to provide a bold, serif font for emphasis. I paired this with Raleway for my subtitle, axis text, and caption to have a more legible, clean look for the finer-detailed textual information. I kept my x-axis labels to a decade interval to avoid over-crowding and complicating my plot.</p>
 <p>I chose to remove most axis gridlines to have a very clean look to emphasize the trends of the lines over time. I included faint y-axis gridlines for easier visual reference to the carbon dioxide levels associated with each line or level. I increased the margins between the title and subtitle and plots, as well as between the individual plots’ subtitles and axes titles to make them more legible.</p>
-<p>I chose the specific shades of red and blue for China and USA based on each country’s flag using a color-picker/eyedropper tool. I then pre-visualized these colors in Coolors to see if I liked how they paired together. I kept all of my text black</p>
+<p>I chose the specific shades of red and blue for China and USA based on each country’s flag using a color-picker/eyedropper tool. I then pre-visualized these colors in Coolors to see if I liked how they paired together. I kept all of my text black to maximize contrast between text elements and the white background.</p>
+<p>I moved the legend to the upper left side within the Total Emissions plot to maximize my data-ink ratio, reduce clutter, and minimize eye strain for readers. I only have it in the first subplot, along with only having the x-axis title on the second subplot because these two elements are shared between the two subplots and it felt cluttered and redundant to have this information repeated in both subplots.</p>
 <p>I added a caption to contextualize my data in two ways: firstly, to provide a definition for what 1 kiloton is, and secondly to give context for the per capita emissions plot, to give a global-level context for those emissions levels.</p>
 <p>I centered my primary message and question by having a question as my plot title, and added in more text when I made my infographic to provide more context and point out key trends and takeaways.</p>
 <p>I made sure to avoid colors that are not colorblind-friendly, and paired the bold colors and black text with a white background to maximize contrast and make everything more legible. I also provide alt-text for this plot here, but not in my final infographic as I made it in Canva and exported it as a png, which limits the plot-by-plot alt text capabilities.</p>
@@ -976,9 +978,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="figs/lollipop-plot-eds240-hw4.png" class="img-fluid figure-img" alt="This dumbbell plot depicts top agri-food emissions sources in the USA and mainland China, with emissions levels for each source shown in 1990 compared to 2020, differentiating years by color. 1990 emissions levels are dark green and 2020 emissions levels are light green.  Overall, trends show that China has higher emissions levels in most categories, with a very notable change in the level of the Food Household Consumption emissions source, increasing from roughly 70 thousand kilotons of carbon dioxide in 1990 to over 450 thousand kilotons in 2020."></p>
 </figure>
 </div>
+<p>Alt-text: This dumbbell plot depicts top agri-food emissions sources in the USA and mainland China, with emissions levels for each source shown in 1990 compared to 2020, differentiating years by color. 1990 emissions levels are dark green and 2020 emissions levels are light green. Overall, trends show that China has higher emissions levels in most categories, with a very notable change in the level of the Food Household Consumption emissions source, increasing from roughly 70 thousand kilotons of carbon dioxide in 1990 to over 450 thousand kilotons in 2020.</p>
 <section id="design-choice-breakdown-1" class="level3">
 <h3 class="anchored" data-anchor-id="design-choice-breakdown-1">Design choice breakdown</h3>
+<p>Using a lollipop plot for conveying this information felt like the an intuitive but fresh way to visualize the difference in each sector’s level of emissions between the two years. I could have used bar plots instead, but with how long the names of each sector are, combined with the fact that I wanted to show the difference between USA and mainland China in two different years made it seem like a lollipop plot was a good choice.</p>
 <p>I used Coolors to pick these shades of green. I thought it made sense to have the older time set as a darker green, and the newer time as a lighter green, like how you can see new, light-green growth at the tips of evergreen trees while the rest of the branch’s needles are a deeper, darker green.</p>
+<p>I used the same typefaces (Playfair Display and Raleway) to carry the same theme of the first visualizations and provide the contrast and emphasis needed to maximize how legible and aesthetically-appealing my text could be.</p>
+<p>I did not include a separate legend, and just chose to use the “1990” and “2020” in the title as a color-coded in-line legend indicating what the different shades of green represented. I chose to do this because I wanted to avoid over-cluttering my plot and minimize any additional text that may distract from the trends or context that I wanted to give. I chose to add text in Canva and not in the actual plot itself because I wanted the flexibility of having some of the text fully outside of the plot. This also allowed for faster customization of where each textbox went, and I was racing against the deadline for this assignment.</p>
+<p>I set the facet-wrapped title backgrounds to be blank and removed the sub-plot borderlines to make the plot look more sleek and cohesive. I went with simple left-justified subplot titles to reduce eye strain, so that the reader has to look in one general area to discern textual information. This avoids the extra brain power needed to look at a centered title, then back to the y-axis, then back to the plot, etc..</p>
+<p>Using the <code>scales</code> package, I formatted the x-axis labels of emissions to be in the thousand kilotons scale, indicating “thousand” with a “k” to reduce plot clutter. I did not include a caption in this plot because the caption in the earlier emissions plot provides the context and definition for what a kiloton is. I also wanted to avoid adding too much text, as the lengthy variable/emissions source names already add a lot of text.</p>
+<p>I added alternative text here to increase accessibility for audience members who may have visual impairments or situational or environmetnal issues which may cause them to be unable to properly see the plot.</p>
 </section>
 </section>
 <section id="visualization-4-map" class="level1">
@@ -1016,12 +1025,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"none"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><img src="figs/map-plot-eds240-hw4.png" class="img-fluid"></p>
-<p>I ultimately cropped this output to focus more closely on the countries in question, as I wanted to fit as much information on my infographic as possible (perhaps too much… #cluttercore?).</p>
+<p><img src="figs/map-plot-eds240-hw4.png" class="img-fluid" alt="This map of the world by country shows the United States of America in dark blue and mainland China in red. All other countries are light grey, which serves to highlight these two emphasized countries. All countries are on a white background, with no axes labels or coordinate scales."></p>
+<p>Alt-text: This map of the world by country shows the United States of America in dark blue and mainland China in red. All other countries are light grey, which serves to highlight these two emphasized countries. All countries are on a white background, with no axes labels or coordinate scales.</p>
+<p>I cropped out Antarctica because I wanted to focus my plot on the countries relevant to my guiding questions. I ultimately cropped this map output to focus more closely on the countries in question, as I wanted to fit as much information on my infographic as possible (perhaps too much… #cluttercore?).</p>
 <p>I chose to color the highlighted countries (USA and mainland China) by their thematic colors discussed earlier.</p>
+<p>Removing gridlines, latitude and longitude markers, and any other features helps simplify this visualization and give it a void-effect, which is ideal for how I use it in my final infographic.</p>
+<p>I didn’t code in any annotations for this visual because I wasn’t sure where I wanted the text to go, and at first anticipated having it outside of the visual altogether. With more time, I would try to code in those annotations instead of just relying on Canva. For those text elements that I ended up adding in Canva, I used Raleway typeface and colored the text to match each country, following the theme of the overall infographic and country-specific colors to cement the contextual and thematic ties throughout the visualizations.</p>
+<p>I also included alt-text for this visual here to increase accessibility for audience members who may have visual impairments or situational or environmental issues which may cause them to be unable to properly see the plot.</p>
 </section>
-<section id="extra-visualization-4-trends-in-food-sector-emissions-over-time" class="level1">
-<h1>Extra: Visualization 4: Trends in Food sector emissions over time</h1>
+<section id="extra-visualization-5-trends-in-food-sector-emissions-over-time" class="level1">
+<h1>Extra: Visualization 5: Trends in Food sector emissions over time</h1>
 <p>While I ended up dropping this visualization from my infographic due to space and info-overload limitations, I thought I’d still share and include my code for this fourth visualization that I developed during my project.</p>
 <div class="cell">
 <details>
@@ -1210,7 +1223,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-182"><a href="#cb10-182" aria-hidden="true" tabindex="-1"></a>food_plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
+<p><img src="figs/food-sector-emissions-eds240-hw4.png" class="img-fluid"></p>
 <p>This plot honestly surprised me, because I expected food transport emissions to go up significantly in both countries as more of the population moved into cities, meaning that more food had to travel farther to get to the higher urban densities of each country’s populations. I did also spend a long time trying to get the different elements to be laid out in a more aesthetically pleasing way, including changing the spacing of the panel elements (faceted plots). I’ve spaced them out in the x-direction, but not y-direction.</p>
+<p>I’m not including alternative text, and I won’t go into detail about my design choices here because I didn’t end up using this plot.</p>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
@@ -1231,12 +1246,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   author = {Ramji, Anna},
   title = {Agri-Food {Emissions} in {USA} and {China}},
   date = {2024-03-09},
-  url = {https://annaramji.github.io/blog/2024-3-9-agrifood-emissions-viz/},
+  url = {https://annaramji.github.io/blog/2024-03-09-agrifood-emissions-viz/},
   langid = {en}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-ramji2024" class="csl-entry quarto-appendix-citeas" role="listitem">
 Ramji, Anna. 2024. <span>“Agri-Food Emissions in USA and China.”</span>
-March 9, 2024. <a href="https://annaramji.github.io/blog/2024-3-9-agrifood-emissions-viz/">https://annaramji.github.io/blog/2024-3-9-agrifood-emissions-viz/</a>.
+March 9, 2024. <a href="https://annaramji.github.io/blog/2024-03-09-agrifood-emissions-viz/">https://annaramji.github.io/blog/2024-03-09-agrifood-emissions-viz/</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
