@@ -601,7 +601,7 @@ I figured it was unlikely that a general audience has the domain knowledge to kn
 
 # Visualization 3: Lollipop plot
 
-I created a lollipop plot to compare the emissions levels of selected sources in 1990 vs. 2020 in USA and mainland China.
+To answer my final sub-question, "What are the key contributors (emissions sources) to agri-food CO~2~ emissions in 1990 in USA and China, and how do they compare to the top agri-food emissions sources in 2020?" I created a lollipop plot to compare the emissions levels of selected sources in 1990 vs. 2020 in USA and mainland China. The subsets I created for this plot are in the Data Wrangling section included earlier.
 
 ```{r}
 # setting x-axis label
