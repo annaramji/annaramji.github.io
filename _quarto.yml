@@ -5,12 +5,15 @@ project:
 website:
   title: "Anna Ramji"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
       - href: blog.qmd
         text: Projects + Blog
+      - href: docs/Ramji_Anna_Resume.pdf
+        text: Resume
  #     - href: resources.qmd
  #       text: Resources
   page-footer:
