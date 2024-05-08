@@ -71,9 +71,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -163,21 +163,16 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Quarto,MEDS,Stats,R,Portfolio,Data Visualization,ggplot2,Infographic" data-listing-date-sort="1709971200000" data-listing-file-modified-sort="1710572339364" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="75">
-<div class="thumbnail">
-<p><a href="./blog/agrifood-emissions-viz/index.html"> <p class="card-img-top"><img src="blog/agrifood-emissions-viz/figs/shorter_infographic_eds240.png"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./blog/agrifood-emissions-viz/index.html">
-<h3 class="no-anchor listing-title">
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Quarto,MEDS,Stats,R,Portfolio,Data Visualization,ggplot2,Infographic" data-listing-date-sort="1709971200000" data-listing-file-modified-sort="1710572339364" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="75">
+<a href="./blog/agrifood-emissions-viz/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="blog/agrifood-emissions-viz/figs/shorter_infographic_eds240.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Agri-food Emissions in USA and China
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -204,36 +199,29 @@ ggplot2
 Infographic
 </div>
 </div>
-<a href="./blog/agrifood-emissions-viz/index.html">
-<div class="listing-description">
-<p>Data visualization and infographic development for agri-food carbon dioxide emissions in USA and China from 1990-2020 using IPCC and FAO data from Kaggle</p>
+<div class="card-text listing-description">
+Data visualization and infographic development for agri-food carbon dioxide emissions in USA and China from 1990-2020 using IPCC and FAO data from Kaggle
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/agrifood-emissions-viz/index.html">
-<div class="listing-date">
-Mar 9, 2024
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Anna Ramji
 </div>
+<div class="listing-date">
+Mar 9, 2024
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Quarto,MEDS,Stats,R,Portfolio,Marine" data-listing-date-sort="1702800000000" data-listing-file-modified-sort="1704666758308" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55">
-<div class="thumbnail">
-<p><a href="./blog/ca-spiny-lobsters/index.html"> <p class="card-img-top"><img src="blog/ca-spiny-lobsters/figs/CA_Spiny_Lobster.jpg" alt="this image shows two california spiny lobsters under a rock"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./blog/ca-spiny-lobsters/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="1" data-categories="Quarto,MEDS,Stats,R,Portfolio,Marine" data-listing-date-sort="1702800000000" data-listing-file-modified-sort="1704666758308" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="55">
+<a href="./blog/ca-spiny-lobsters/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="blog/ca-spiny-lobsters/figs/CA_Spiny_Lobster.jpg" alt="this image shows two california spiny lobsters under a rock" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 California Spiny Lobsters &amp; Reef Bottom Temperatures
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -254,36 +242,29 @@ Portfolio
 Marine
 </div>
 </div>
-<a href="./blog/ca-spiny-lobsters/index.html">
-<div class="listing-description">
-<p>Statistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites</p>
+<div class="card-text listing-description">
+Statistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/ca-spiny-lobsters/index.html">
-<div class="listing-date">
-Dec 17, 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Anna Ramji
 </div>
+<div class="listing-date">
+Dec 17, 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Quarto,MEDS,Geospatial,R,tmap,ggplot2" data-listing-date-sort="1702800000000" data-listing-file-modified-sort="1704667264556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="33">
-<div class="thumbnail">
-<p><a href="./blog/texas-power-crisis/index.html"> <p class="card-img-top"><img src="blog/texas-power-crisis/images/houston-blackout-pic.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./blog/texas-power-crisis/index.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="2" data-categories="Quarto,MEDS,Geospatial,R,tmap,ggplot2" data-listing-date-sort="1702800000000" data-listing-file-modified-sort="1704667264556" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="33">
+<a href="./blog/texas-power-crisis/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="blog/texas-power-crisis/images/houston-blackout-pic.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 2021 Texas Power Crisis: Blackout Impact Analysis
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -304,36 +285,31 @@ tmap
 ggplot2
 </div>
 </div>
-<a href="./blog/texas-power-crisis/index.html">
-<div class="listing-description">
-<p>Analyzing VIIRS Night Lights data and U.S. Census data for assessing impact on Houston metropolitan area</p>
+<div class="card-text listing-description">
+Analyzing VIIRS Night Lights data and U.S. Census data for assessing impact on Houston metropolitan area
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/texas-power-crisis/index.html">
-<div class="listing-date">
-Dec 17, 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Anna Ramji
 </div>
+<div class="listing-date">
+Dec 17, 2023
+</div>
+</div>
+</div>
+</div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Quarto,MEDS,Python,Geospatial" data-listing-date-sort="1702454400000" data-listing-file-modified-sort="1704665939996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
-<div class="thumbnail">
-<p><a href="./blog/thomas-fire/thomas-fire-analysis-blog.html"> <img src="./blog/thomas-fire/thomas-fire-sb.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./blog/thomas-fire/thomas-fire-analysis-blog.html">
-<h3 class="no-anchor listing-title">
+<div class="g-col-1" data-index="3" data-categories="Quarto,MEDS,Python,Geospatial" data-listing-date-sort="1702454400000" data-listing-file-modified-sort="1704665939996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<a href="./blog/thomas-fire/thomas-fire-analysis-blog.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="./blog/thomas-fire/thomas-fire-sb.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
 Thomas Fire
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
+</h5>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
 Quarto
@@ -348,22 +324,20 @@ Python
 Geospatial
 </div>
 </div>
-<a href="./blog/thomas-fire/thomas-fire-analysis-blog.html">
-<div class="listing-description">
-<p>Data analysis of AQI and Landsat data related to the Thomas Fire</p>
+<div class="card-text listing-description">
+Data analysis of AQI and Landsat data related to the Thomas Fire
 </div>
-</a>
-</div>
-<div class="metadata">
-<a href="./blog/thomas-fire/thomas-fire-analysis-blog.html">
-<div class="listing-date">
-Dec 13, 2023
-</div>
+<div class="card-attribution card-text-small justify">
 <div class="listing-author">
 Anna Ramji
 </div>
-</a>
+<div class="listing-date">
+Dec 13, 2023
 </div>
+</div>
+</div>
+</div>
+</a>
 </div>
 </div>
 <div class="listing-no-matching d-none">
