@@ -12,8 +12,8 @@ website:
         text: About
       - href: blog.qmd
         text: Projects + Blog
- #     - href: docs/Ramji_Anna_resume_web.pdf
-  #      text: Resume
+      - href: docs/Ramji_Anna_resume_web.pdf
+        text: Resume
  #     - href: resources.qmd
  #       text: Resources
   page-footer:
