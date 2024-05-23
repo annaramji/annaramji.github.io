@@ -7,15 +7,15 @@ about:
   image-shape: rounded
   image-width: 15em
   links: 
-    - text: LinkedIn
-      href: https://www.linkedin.com/in/annaramji/ 
-      icon: linkedin.svg
     - text: GitHub
       icon: github
       href: https://github.com/annaramji
+    - text: "{{< iconify fa6-brands linkedin >}}"
+      href: https://www.linkedin.com/in/annaramji/ 
+    #  icon: 
     - text: Email
       icon: envelope
-      href: mailto::aramji@ucsb.edu
+      href: mailto::aramji@bren.ucsb.edu
     - text: Bren Page
       href: https://bren.ucsb.edu/people/anna-ramji
 ---
@@ -28,18 +28,20 @@ I'm interested in all things sustainability, including (but definitely not limit
 
 -   developing the renewable energy grid
 
--   agroecology
-
 -   carbon accounting and corporate sustainability
 
 -   ocean health and resource management
 
-## Education:
+-   agroecology
 
-Master of Environmental Data Science, University of California, Santa Barbara (2024)
+------------------------------------------------------------------------
+
+### Education:
+
+Master of Environmental Data Science (MEDS), Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)
 
 B.S. Environmental Sciences, University of California, Berkeley (2021)
 
 ### Theme:
 
--   custom built by Anna Ramji (2024), (work in progress!)
+-   custom built by Anna Ramji (2024) \[work in progress!\]

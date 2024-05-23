@@ -19,10 +19,10 @@ website:
  #       text: Resources
   page-footer:
 #  background: light
-    left: "Copyright 2024, Anna Ramji"
-    right:
-     - icon: github
-       href: https://github.com/annaramji
+    left: Copyright 2024, Anna Ramji
+    right: Source code available on [{{< fa brands github title="the Github octocat" >}} GitHub](https://github.com/annaramji/annaramji.github.io){target=_blank}
+   #  - icon: github
+    #   href: https://github.com/annaramji
 
 format:
   html:

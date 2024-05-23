@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Projects + Blog",
     "section": "",
-    "text": "Agri-food Emissions in USA and China\n\n\n\nQuarto\n\n\nMEDS\n\n\nStats\n\n\nR\n\n\nPortfolio\n\n\nData Visualization\n\n\nggplot2\n\n\nInfographic\n\n\n\nData visualization and infographic development for agri-food carbon dioxide emissions in USA and China from 1990-2020 using IPCC and FAO data from Kaggle\n\n\n\nAnna Ramji\n\n\nMar 9, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nCalifornia Spiny Lobsters & Reef Bottom Temperatures\n\n\n\nQuarto\n\n\nMEDS\n\n\nStats\n\n\nR\n\n\nPortfolio\n\n\nMarine\n\n\n\nStatistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites\n\n\n\nAnna Ramji\n\n\nDec 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n2021 Texas Power Crisis: Blackout Impact Analysis\n\n\n\nQuarto\n\n\nMEDS\n\n\nGeospatial\n\n\nR\n\n\ntmap\n\n\nggplot2\n\n\n\nAnalyzing VIIRS Night Lights data and U.S. Census data for assessing impact on Houston metropolitan area\n\n\n\nAnna Ramji\n\n\nDec 17, 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThomas Fire\n\n\n\nQuarto\n\n\nMEDS\n\n\nPython\n\n\nGeospatial\n\n\n\nData analysis of AQI and Landsat data related to the Thomas Fire\n\n\n\nAnna Ramji\n\n\nDec 13, 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Agri-food Emissions in USA and China\n\n\n\n\n\n\n\nQuarto\n\n\nMEDS\n\n\nStats\n\n\nR\n\n\nPortfolio\n\n\nData Visualization\n\n\nggplot2\n\n\nInfographic\n\n\n\n\nData visualization and infographic development for agri-food carbon dioxide emissions in USA and China from 1990-2020 using IPCC and FAO data from Kaggle\n\n\n\n\n\n\nMar 9, 2024\n\n\nAnna Ramji\n\n\n\n\n\n\n  \n\n\n\n\nCalifornia Spiny Lobsters & Reef Bottom Temperatures\n\n\n\n\n\n\n\nQuarto\n\n\nMEDS\n\n\nStats\n\n\nR\n\n\nPortfolio\n\n\nMarine\n\n\n\n\nStatistical analysis and data visualization of CA Spiny Lobster data from 5 Santa Barbara Coastal LTER Reef sites\n\n\n\n\n\n\nDec 17, 2023\n\n\nAnna Ramji\n\n\n\n\n\n\n  \n\n\n\n\n2021 Texas Power Crisis: Blackout Impact Analysis\n\n\n\n\n\n\n\nQuarto\n\n\nMEDS\n\n\nGeospatial\n\n\nR\n\n\ntmap\n\n\nggplot2\n\n\n\n\nAnalyzing VIIRS Night Lights data and U.S. Census data for assessing impact on Houston metropolitan area\n\n\n\n\n\n\nDec 17, 2023\n\n\nAnna Ramji\n\n\n\n\n\n\n  \n\n\n\n\nThomas Fire\n\n\n\n\n\n\n\nQuarto\n\n\nMEDS\n\n\nPython\n\n\nGeospatial\n\n\n\n\nData analysis of AQI and Landsat data related to the Thomas Fire\n\n\n\n\n\n\nDec 13, 2023\n\n\nAnna Ramji\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "practice-markdown.html",
@@ -88,21 +88,14 @@
     "href": "index.html",
     "title": "Anna Ramji",
     "section": "",
-    "text": "Welcome to my website! My name is Anna Ramji and I’m a current Master of Environmental Data Science (MEDS) student at the Bren School of Environmental Science & Management at UC Santa Barbara. I’m currently working as an Ocean Health Index (OHI) fellow at the National Center of Ecological Analysis and Synthesis (NCEAS).\nI’m interested in all things sustainability, including (but definitely not limited to!):\n\ndeveloping the renewable energy grid\nagroecology\ncarbon accounting and corporate sustainability\nocean health and resource management"
+    "text": "Welcome to my website! My name is Anna Ramji and I’m a current Master of Environmental Data Science (MEDS) student at the Bren School of Environmental Science & Management at UC Santa Barbara. I’m currently working as an Ocean Health Index (OHI) fellow at the National Center of Ecological Analysis and Synthesis (NCEAS).\nI’m interested in all things sustainability, including (but definitely not limited to!):\n\ndeveloping the renewable energy grid\ncarbon accounting and corporate sustainability\nocean health and resource management\nagroecology\n\n\n\n\nMaster of Environmental Data Science (MEDS), Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)\nB.S. Environmental Sciences, University of California, Berkeley (2021)\n\n\n\n\ncustom built by Anna Ramji (2024) [work in progress!]"
   },
   {
     "objectID": "index.html#hello",
     "href": "index.html#hello",
     "title": "Anna Ramji",
     "section": "",
-    "text": "Welcome to my website! My name is Anna Ramji and I’m a current Master of Environmental Data Science (MEDS) student at the Bren School of Environmental Science & Management at UC Santa Barbara. I’m currently working as an Ocean Health Index (OHI) fellow at the National Center of Ecological Analysis and Synthesis (NCEAS).\nI’m interested in all things sustainability, including (but definitely not limited to!):\n\ndeveloping the renewable energy grid\nagroecology\ncarbon accounting and corporate sustainability\nocean health and resource management"
-  },
-  {
-    "objectID": "index.html#education",
-    "href": "index.html#education",
-    "title": "Anna Ramji",
-    "section": "Education:",
-    "text": "Education:\nMaster of Environmental Data Science, University of California, Santa Barbara (2024)\nB.S. Environmental Sciences, University of California, Berkeley (2021)\n\nTheme:\n\ncustom built by Anna Ramji (2024), (work in progress!)"
+    "text": "Welcome to my website! My name is Anna Ramji and I’m a current Master of Environmental Data Science (MEDS) student at the Bren School of Environmental Science & Management at UC Santa Barbara. I’m currently working as an Ocean Health Index (OHI) fellow at the National Center of Ecological Analysis and Synthesis (NCEAS).\nI’m interested in all things sustainability, including (but definitely not limited to!):\n\ndeveloping the renewable energy grid\ncarbon accounting and corporate sustainability\nocean health and resource management\nagroecology\n\n\n\n\nMaster of Environmental Data Science (MEDS), Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)\nB.S. Environmental Sciences, University of California, Berkeley (2021)\n\n\n\n\ncustom built by Anna Ramji (2024) [work in progress!]"
   },
   {
     "objectID": "blog/ca-spiny-lobsters/index.html",
@@ -270,6 +263,6 @@
     "href": "about.html#education",
     "title": "About",
     "section": "Education:",
-    "text": "Education:\nMaster of Environmental Data Science, University of California, Santa Barbara (2024)\nB.S. Environmental Sciences, University of California, Berkeley (2021)"
+    "text": "Education:\nMaster of Environmental Data Science (MEDS), Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)\nB.S. Environmental Sciences, University of California, Berkeley (2021)"
   }
 ]
