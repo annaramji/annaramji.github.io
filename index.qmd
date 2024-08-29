@@ -1,7 +1,7 @@
 ---
 title: "Anna Ramji"
 toc: false
-image: images/RamjiAnna_MEDS_24_Bren_Portraits_0001.jpg
+image: images/Anna_Ramji.jpg
 about:
   template: trestles
   image-shape: rounded
@@ -22,9 +22,9 @@ about:
 
 ## Hello!
 
-Welcome to my website! My name is Anna Ramji and I'm a current Master of Environmental Data Science ([MEDS](https://ucsb-meds.github.io/)) student at the Bren School of Environmental Science & Management at UC Santa Barbara. I'm currently working as an Ocean Health Index ([OHI](https://oceanhealthindex.org/)) fellow at the National Center of Ecological Analysis and Synthesis ([NCEAS](https://www.nceas.ucsb.edu/)).
+Welcome to my website! My name is Anna Ramji and I'm a recent graduate from the Master of Environmental Data Science ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)) program at the Bren School of Environmental Science & Management at UC Santa Barbara. I'm currently working as an Ocean Health Index ([OHI](https://oceanhealthindex.org/)) fellow at the National Center of Ecological Analysis and Synthesis ([NCEAS](https://www.nceas.ucsb.edu/)).
 
-I'm interested in all things sustainability, including (but definitely not limited to!):
+I'm interested in all things sustainability, including (but definitely not limited to):
 
 -   developing the renewable energy grid
 
