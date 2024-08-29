@@ -26,11 +26,11 @@ Welcome to my website! My name is Anna Ramji and I'm a recent graduate from the 
 
 I'm interested in all things sustainability, including (but definitely not limited to):
 
+-   ocean health and resource management
+
 -   developing the renewable energy grid
 
 -   carbon accounting and corporate sustainability
-
--   ocean health and resource management
 
 -   agroecology
 
@@ -38,9 +38,12 @@ I'm interested in all things sustainability, including (but definitely not limit
 
 ### Education:
 
-Master of Environmental Data Science (MEDS), Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)
+**Master of Environmental Data Science (MEDS)**, Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)
 
-B.S. Environmental Sciences, University of California, Berkeley (2021)
+**B.S. Environmental Sciences**, University of California, Berkeley (2021)
+
+
+------------------
 
 ### Theme:
 
