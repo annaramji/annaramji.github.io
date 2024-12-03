@@ -22,25 +22,29 @@ about:
 
 ## Hello!
 
-Welcome to my website! My name is Anna Ramji and I'm a recent graduate from the Master of Environmental Data Science ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)) program at the Bren School of Environmental Science & Management at UC Santa Barbara. I'm currently working as an Ocean Health Index ([OHI](https://oceanhealthindex.org/)) fellow at the National Center of Ecological Analysis and Synthesis ([NCEAS](https://www.nceas.ucsb.edu/)).
+Welcome to my website! My name is Anna Ramji and I'm an environmental data scientist. 
+
+
+My current role is as a Data Analyst at [Gridware](https://www.gridware.io) in the SF Bay Area. 
+I recently worked as an Ocean Health Index ([OHI](https://oceanhealthindex.org/)) fellow at the National Center of Ecological Analysis and Synthesis ([NCEAS](https://www.nceas.ucsb.edu/)). 
+
+I graduated from the Master of Environmental Data Science ([MEDS](https://bren.ucsb.edu/masters-programs/master-environmental-data-science)) program at the Bren School of Environmental Science & Management at UC Santa Barbara in 2024. I also have a B.S. in Environmental Sciences from UC Berkeley (go bears!).
 
 I'm interested in all things sustainability, including (but definitely not limited to):
 
--   ocean health and resource management
-
 -   developing the renewable energy grid
 
--   carbon accounting and corporate sustainability
+-   ocean health and resource management
 
--   agroecology
+-   agroecology and sustainable agriculture
 
 ------------------------------------------------------------------------
 
 ### Education:
 
-**Master of Environmental Data Science (MEDS)**, Bren School of Environmental Science & Management, University of California, Santa Barbara (2024)
+**Master of Environmental Data Science (MEDS)**, Bren School of Environmental Science & Management, University of California, Santa Barbara (2024). Academic Achievement Award (sole recipient). 
 
-**B.S. Environmental Sciences**, University of California, Berkeley (2021)
+**B.S. Environmental Sciences** (Honors), University of California, Berkeley (2021)
 
 
 ------------------
